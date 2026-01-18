@@ -1,5 +1,5 @@
 const authService = require("../services/authService");
-const { validateSignUpData } = require("../utils/validation");
+const { validateSignUpData, validateLoginData } = require("../utils/validation");
 
 const handleSignup = async (req, res) => {
     try {
@@ -21,6 +21,8 @@ const handleSignup = async (req, res) => {
 
 const handleLogin = async (req, res) => {
     try {
+        validateLoginData(req);
+
         const { userEmail, password } = req.body;
         const { user, token } = await authService.loginUser(userEmail, password);
 

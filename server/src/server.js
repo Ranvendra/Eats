@@ -1,31 +1,16 @@
-const express = require("express");
-const app = express();
-const cors = require('cors')
-require("dotenv");
+const app = require("./app");
+const connectDB = require("./config/database");
+require("dotenv").config();
 
+const PORT = process.env.PORT || 5000;
 
-
-
-const port = process.env.PORT || 5000;
-
-app.use(cors());
-app.use(express.json());
-
-
-
-
-app.get("/", (req, res) => {
-  return res.status(200).json({
-    service: "Eats-api",
-    status: "Success",
-    message: "Kitchen is open & orders are cooking nicely 🔥",
+connectDB()
+  .then(() => {
+    console.log("Database connection established...");
+    app.listen(PORT, () => {
+      console.log(`Server is successfully listening on port ${PORT}...`);
+    });
+  })
+  .catch((err) => {
+    console.error("Database cannot be connected!!", err);
   });
-});
-
-app.listen(port, () => {
-
-    // Database Connection Logic
-
-
-    console.log(`Server is running on ${port} port`)
-});

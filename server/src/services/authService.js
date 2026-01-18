@@ -17,12 +17,14 @@ const signupUser = async (userData) => {
     return savedUser;
 };
 
-const loginUser = async (userEmail, password) => {
-    if (!userEmail || !password) {
+const loginUser = async (identifier, password) => {
+    if (!identifier || !password) {
         throw new Error("Invalid credentials");
     }
 
-    const user = await User.findOne({ userEmail: userEmail });
+    const user = await User.findOne({
+        $or: [{ userEmail: identifier }, { userPhone: identifier }],
+    });
     if (!user) {
         throw new Error("Invalid credentials");
     }

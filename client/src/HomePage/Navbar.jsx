@@ -1,7 +1,7 @@
 import React, { useState, lazy, Suspense } from "react";
 import logo from "../../public/Eats_OficialLogo.png";
 import { Search, ShoppingCart } from "lucide-react";
-import LazyImage from "../components/common/LazyImage";
+import LazyImage from "../LazyLoading/LazyImage";
 
 // Lazy load AuthSidebar - Code Splitting (Namaste React Pattern)
 const AuthSidebar = lazy(() => import("../authPage/AuthSidebar"));

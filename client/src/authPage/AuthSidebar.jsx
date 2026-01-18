@@ -3,31 +3,46 @@ import { X } from "lucide-react";
 import Login from "./Login";
 import Signup from "./Signup";
 import Person from "../../public/assets/authPerson.png";
-import LazyImage from "../components/common/LazyImage";
+import LazyImage from "../LazyLoading/LazyImage";
 
 const AuthSidebar = ({ isOpen, onClose }) => {
   const [view, setView] = useState("login"); // "login" or "signup"
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Trigger slide-in animation when component mounts
+  React.useEffect(() => {
+    if (isOpen) {
+      // Small timeout to ensure the browser has painted the initial "off-screen" state
+      const timer = setTimeout(() => setIsVisible(true), 10);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
+
+  const handleClose = () => {
+    setIsVisible(false); // Trigger slide-out animation
+    setTimeout(onClose, 500); // Wait for animation to finish before unmounting
+  };
 
   return (
     <>
       {/* Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-500 ease-in-out ${
+          isVisible ? "opacity-100" : "opacity-0"
         }`}
-        onClick={onClose}
+        onClick={handleClose}
       />
 
       {/* Sidebar Drawer */}
       <div
         className={`fixed top-0 right-0 z-50 h-full w-full sm:w-[450px] bg-white shadow-2xl transform transition-transform duration-500 ease-in-out font-poppins ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+          isVisible ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="p-8 h-full flex flex-col overflow-y-auto">
           {/* Close Button */}
           <button
-            onClick={onClose}
+            onClick={handleClose}
             className="self-start text-gray-500 hover:text-gray-800 mb-8 transition-colors"
           >
             <X className="w-7 h-7" />

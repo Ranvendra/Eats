@@ -1,5 +1,5 @@
 import React from "react";
-import LazyImage from "../components/common/LazyImage";
+import LazyImage from "../LazyLoading/LazyImage";
 
 const Hero = () => {
   return (

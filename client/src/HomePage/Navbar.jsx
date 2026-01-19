@@ -1,4 +1,5 @@
 import React, { useState, lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../public/Eats_OficialLogo.png";
 import { Search, ShoppingCart } from "lucide-react";
 import LazyImage from "../LazyLoading/LazyImage";
@@ -11,7 +12,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex items-center justify-between px-25 py-6 max-w-8xl mx-auto font-poppins">
+      <nav className="flex items-center justify-between px-25 py-3.5 max-w-8xl mx-auto font-poppins">
         {/* Logo */}
         <div className="flex items-center mr-0">
           <div className="text-emerald-500 text-2xl">
@@ -31,29 +32,29 @@ const Navbar = () => {
 
         {/* Center Links */}
         <div className="hidden  text-[17px] md:flex items-center gap-12 text-gray-800 font-light">
-          <a
-            href="#"
-            className="text-gray-900 border-b-2 border-[#04b235] pb-1"
+          <Link
+            to="/"
+            className="hover:text-[#00982b] transition-colors hover:font-medium"
           >
             Home
+          </Link>
+          <Link
+            to="/restaurants"
+            className="hover:text-[#00982b] transition-colors hover:font-medium"
+          >
+            Restaurants
+          </Link>
+          <a
+            href="#"
+            className="hover:text-[#00982b] transition-colors hover:font-medium"
+          >
+            Orders
           </a>
           <a
             href="#"
             className="hover:text-[#00982b] transition-colors hover:font-medium"
           >
             About
-          </a>
-          <a
-            href="#"
-            className="hover:text-[#00982b] transition-colors hover:font-medium"
-          >
-            Service area
-          </a>
-          <a
-            href="#"
-            className="hover:text-[#00982b] transition-colors hover:font-medium"
-          >
-            Food
           </a>
         </div>
 

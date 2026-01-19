@@ -7,14 +7,17 @@ const cookieParser = require("cookie-parser");
 
 app.use(
     cors({
-        origin: process.env.FRONTEND_URL,
+        origin: [process.env.FRONTEND_URL, process.env.LOCAL_FRONTEND_URL],
         credentials: true,
     })
 );
 app.use(express.json());
 app.use(cookieParser());
 
+const restaurantRouter = require("./routes/restaurantRouter");
+
 app.use("/", authRouter);
+app.use("/api/v1/restaurants", restaurantRouter);
 
 // Test route
 app.get("/", (req, res) => {

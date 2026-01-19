@@ -50,6 +50,9 @@ const restaurantSchema = new mongoose.Schema(
             type: Boolean,
             default: false,
         },
+        offer: {
+            type: String, // very short 2 -3 words.
+        }
     },
     {
         timestamps: true,

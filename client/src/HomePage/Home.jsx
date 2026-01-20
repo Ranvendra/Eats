@@ -14,6 +14,9 @@ const Home = () => {
         <Navbar />
         <Hero />
       </div>
+      <div className="bg-[#fff7ec] p-1 mr-110 ml-110 border border-[#ffc49d] rounded-xl">
+      <h2 className="z-100 bottom-0 sticky text-xl text-[#ff6c2d] flex justify-center">This project is under development</h2>
+      </div>
     </div>
   );
 };

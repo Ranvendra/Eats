@@ -100,7 +100,7 @@ const RestaurantFilters = ({ filters, setFilters, cuisines }) => {
         {/* Filter Button */}
         <button
           onClick={openFilterModal}
-          className={`group flex items-center gap-2 px-4 py-2 border rounded-full shadow-sm text-sm font-medium flex-shrink-0 transition-all ${
+          className={`group flex items-center gap-2 px-4 py-2 border rounded-full shadow-sm text-sm font-medium shrink-0 transition-all ${
             activeCount > 0
               ? "bg-gray-800 text-white border-gray-800"
               : "bg-white border-gray-200 text-gray-700 hover:bg-gray-50 hover:shadow-md hover:border-gray-300"
@@ -117,7 +117,7 @@ const RestaurantFilters = ({ filters, setFilters, cuisines }) => {
         {/* Sort By Button */}
         <button
           onClick={openSortModal}
-          className={`flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 hover:shadow-md hover:border-gray-300 flex-shrink-0 transition-all ${
+          className={`flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 hover:shadow-md hover:border-gray-300 shrink-0 transition-all ${
             filters.sortBy !== "rating"
               ? "border-gray-800 bg-gray-50 ring-1 ring-gray-800"
               : ""
@@ -134,10 +134,10 @@ const RestaurantFilters = ({ filters, setFilters, cuisines }) => {
       {activeModal === "sort" && (
         <>
           <div
-            className="fixed inset-0 bg-black/40 z-[60] backdrop-blur-[1px] transition-opacity"
+            className="fixed inset-0 bg-black/40 z-60 backdrop-blur-[1px] transition-opacity"
             onClick={() => setActiveModal(null)}
           />
-          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-80 rounded-2xl shadow-xl z-[70] overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-80 rounded-2xl shadow-xl z-70 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             {/* Header */}
             <div className="p-4 border-b border-gray-100 flex justify-between items-center">
               <h3 className="text-base font-bold text-gray-800">
@@ -192,10 +192,10 @@ const RestaurantFilters = ({ filters, setFilters, cuisines }) => {
       {activeModal === "filter" && (
         <>
           <div
-            className="fixed inset-0 bg-black/50 z-[60] backdrop-blur-[1px] transition-opacity"
+            className="fixed inset-0 bg-black/50 z-60 backdrop-blur-[1px] transition-opacity"
             onClick={() => setActiveModal(null)}
           />
-          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-full max-w-2xl h-[450px] rounded-2xl shadow-xl z-[70] overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200 border border-gray-100">
+          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-full max-w-2xl h-[450px] rounded-2xl shadow-xl z-70 overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200 border border-gray-100">
             {/* Header */}
             <div className="flex justify-between items-center px-6 py-4 border-b border-gray-100 bg-white">
               <h3 className="text-lg font-bold text-gray-800 tracking-tight">

@@ -71,24 +71,12 @@ const OrderHistory = () => {
             </div>
           ))}
         </div>
-        
+
         {/* Footer Line */}
         <div className="w-full h-px bg-black mt-12"></div>
         <div className="mt-4 flex justify-between items-center text-xs font-bold uppercase tracking-widest text-gray-400">
-            <span>End of Archive</span>
-            <span>2024</span>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-        {/* End of list decorator */}
-        <div className="mt-24 text-center">
-          <p className="text-gray-400 uppercase tracking-widest text-xs font-bold">
-            End of History
-          </p>
-          <div className="w-1 h-12 bg-gray-200 mx-auto mt-4"></div>
+          <span>End of Archive</span>
+          <span>2024</span>
         </div>
       </div>
     </div>

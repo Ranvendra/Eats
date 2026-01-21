@@ -1,8 +1,12 @@
 import axios from "axios";
 
+// Determine the base URL based on environment
+const baseURL = import.meta.env.VITE_BACKEND_URL ||
+    (import.meta.env.MODE === "development" ? "http://localhost:5001" : "/");
+
 // Create Axios Instance
 const axiosInstance = axios.create({
-    baseURL: import.meta.env.VITE_LOCAL_BACKEND_URL || "http://localhost:5001", // Correct local dev port
+    baseURL,
     withCredentials: true, // Send cookies with requests
 });
 

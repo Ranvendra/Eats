@@ -2,8 +2,12 @@ import React from "react";
 import { Star } from "lucide-react";
 import LazyImage from "../LazyLoading/LazyImage";
 
+import { useNavigate } from "react-router-dom";
+
 const RestaurantCard = ({ restaurant }) => {
+  const navigate = useNavigate();
   const {
+    _id, // Assuming _id is available
     restaurantName,
     restaurantAddress,
     restaurantCuisine,
@@ -14,8 +18,13 @@ const RestaurantCard = ({ restaurant }) => {
     offer,
   } = restaurant;
 
+  if (!_id) return null; // Don't render if ID is missing (Safety Check)
+
   return (
-    <div className="group cursor-pointer hover:scale-[0.98] transition-all duration-300">
+    <div
+      className="group cursor-pointer hover:scale-[0.98] transition-all duration-300"
+      onClick={() => _id && navigate(`/restaurants/${_id}`)}
+    >
       {/* Image Container with Rounded Corners */}
       <div className="relative h-48 w-full rounded-2xl overflow-hidden shadow-sm">
         <LazyImage

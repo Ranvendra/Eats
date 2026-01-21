@@ -1,0 +1,1252 @@
+[
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bc" },
+    "menuItemName": "Black Truffle Risotto",
+    "menuItemPrice": 45,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1626698651759-335a4b73b222?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Creamy arborio rice infused with shaved Périgord black truffles and aged parmesan."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bc" },
+    "menuItemName": "Seared Foie Gras Terrine",
+    "menuItemPrice": 65,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1615878477218-c576594c9247?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Pan-seared foie gras served with a fig reduction and toasted brioche."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bc" },
+    "menuItemName": "Lobster Thermidor",
+    "menuItemPrice": 95,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1647432657731-8979e2764b88?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Whole lobster baked in a rich cognac and mustard cream sauce with gruyère cheese."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bc" },
+    "menuItemName": "24K Gold Chocolate Tart",
+    "menuItemPrice": 35,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1599709841804-1b0d24497b78?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Dark Valrhona chocolate ganache topped with edible 24-karat gold leaf."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bc" },
+    "menuItemName": "Classic Escargot",
+    "menuItemPrice": 28,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1634825945367-27b0f699313a?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Burgundy snails baked in garlic herb butter sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bd" },
+    "menuItemName": "Chef's Omakase Sashimi",
+    "menuItemPrice": 120,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "A curated selection of the finest seasonal fish flown in from Tokyo."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bd" },
+    "menuItemName": "A5 Wagyu Beef Tataki",
+    "menuItemPrice": 95,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1678263592186-b4b1a4030638?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Lightly seared A5 Miyazaki Wagyu served with ponzu citrus sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bd" },
+    "menuItemName": "Uni & Ikura Don",
+    "menuItemPrice": 85,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1625938144755-652e08e359b7?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Rice bowl topped generously with fresh Sea Urchin and Salmon Roe."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bd" },
+    "menuItemName": "Dragon Roll Deluxe",
+    "menuItemPrice": 32,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Eel and cucumber topped with avocado, tobiko, and unagi sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bd" },
+    "menuItemName": "Matcha Tiramisu",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1618840656094-0f2c41c9b68b?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Japanese twist on the Italian classic with premium ceremonial matcha."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28be" },
+    "menuItemName": "Tagliatelle al Tartufo",
+    "menuItemPrice": 38,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1608219992759-8d74ed8d76eb?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Handmade pasta tossed in a creamy truffle butter sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28be" },
+    "menuItemName": "Wood-Fired Margherita",
+    "menuItemPrice": 24,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "San Marzano tomatoes, buffalo mozzarella, fresh basil, and extra virgin olive oil."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28be" },
+    "menuItemName": "Osso Buco",
+    "menuItemPrice": 42,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1544379379-e58f05e1a2f6?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Braised veal shanks cooked with vegetables, white wine and broth."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28be" },
+    "menuItemName": "Burrata Caprese",
+    "menuItemPrice": 22,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1529312266912-b33cf6227e2f?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Creamy burrata cheese served with heirloom tomatoes and balsamic glaze."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28be" },
+    "menuItemName": "Classic Tiramisu",
+    "menuItemPrice": 16,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Layers of coffee-soaked ladyfingers and mascarpone cream."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bf" },
+    "menuItemName": "Royal Butter Chicken",
+    "menuItemPrice": 26,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Tandoori chicken simmered in a rich, creamy tomato and cashew fenugreek sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bf" },
+    "menuItemName": "Lamb Rogan Josh",
+    "menuItemPrice": 30,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Aromatic Kashmiri lamb curry cooked with traditional spices and yogurt."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bf" },
+    "menuItemName": "Saffron Biryani",
+    "menuItemPrice": 28,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Basmati rice cooked in layers with marinated meat and saffron milk."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bf" },
+    "menuItemName": "Tandoori Prawns",
+    "menuItemPrice": 35,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1559847844-5315695dadae?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Jumbo tiger prawns marinated in yogurt and spices, char-grilled in a clay oven."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28bf" },
+    "menuItemName": "Gulab Jamun Cheesecake",
+    "menuItemPrice": 15,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1595855726224-b5a034639947?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Fusion dessert combining classic NY cheesecake with sweet Indian dumplings."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c0" },
+    "menuItemName": "Carne Asada Tacos",
+    "menuItemPrice": 22,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1624300626419-4da3a6d47f42?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Grilled skirt steak tacos with onions, cilantro, and avocado crema."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c0" },
+    "menuItemName": "Lobster Enchiladas",
+    "menuItemPrice": 38,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1534352956036-cd81e27dd615?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Corn tortillas filled with lobster meat, topped with creamy poblano sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c0" },
+    "menuItemName": "Fresh Guacamole & Chips",
+    "menuItemPrice": 14,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1600552781192-3c4856b3e1d1?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Tableside smashed avocado with lime, cilantro, onions and jalapeno."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c0" },
+    "menuItemName": "Birria Quesatacos",
+    "menuItemPrice": 26,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Crispy cheesy tacos served with a rich beef consommé for dipping."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c0" },
+    "menuItemName": "Churros con Chocolate",
+    "menuItemPrice": 12,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1629853386629-411333c2a631?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Fried dough pastry dusted with cinnamon sugar served with thick chocolate."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c1" },
+    "menuItemName": "The Billionaire Burger",
+    "menuItemPrice": 45,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Wagyu beef patty, foie gras, black truffle shavings, and gold leaf bun."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c1" },
+    "menuItemName": "Truffle Parmesan Fries",
+    "menuItemPrice": 12,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1573080496987-a199f8cd4054?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Hand-cut fries tossed with truffle oil and aged parmesan cheese."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c1" },
+    "menuItemName": "Smokey BBQ Bacon Burger",
+    "menuItemPrice": 24,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Angus beef, applewood smoked bacon, cheddar, and house BBQ sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c1" },
+    "menuItemName": "Crispy Chicken Slider",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1619250906742-d355cfc9b634?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Buttermilk fried chicken breast with spicy coleslaw on brioche."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c1" },
+    "menuItemName": "Salted Caramel Shake",
+    "menuItemPrice": 10,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Thick milkshake spun with sea salt caramel and whipped cream."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c2" },
+    "menuItemName": "Superfood Buddha Bowl",
+    "menuItemPrice": 22,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Quinoa, roasted sweet potato, kale, avocado, and tahini dressing."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c2" },
+    "menuItemName": "Acai Berry Bliss",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1590301157890-4810ed352733?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Organic Acai blended with banana, topped with granola and fresh berries."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c2" },
+    "menuItemName": "Avocado Green Toast",
+    "menuItemPrice": 16,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1588137372308-15f75323a4dd?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Sourdough toast with smashed avocado, hemp seeds, and radish."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c2" },
+    "menuItemName": "Zucchini Noodle Pesto",
+    "menuItemPrice": 20,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1560155016-bd4879ae8f21?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Fresh zucchini noodles tossed in dairy-free basil walnut pesto."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c2" },
+    "menuItemName": "Detox Green Juice",
+    "menuItemPrice": 10,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1610970881699-44a5587cabec?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Cold-pressed kale, spinach, apple, cucumber, and ginger."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c3" },
+    "menuItemName": "Crystal Shrimp Dumplings",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1496116218417-1a781b1c423c?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Translucent dumpling wrappers filled with juicy whole shrimp."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c3" },
+    "menuItemName": "Peking Duck Platter",
+    "menuItemPrice": 65,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1563245372-f21720e32c4d?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Crispy skin roasted duck served with pancakes, scallions, and hoisin."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c3" },
+    "menuItemName": "BBQ Pork Buns (Char Siu)",
+    "menuItemPrice": 14,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1623689047970-1f9d51e73994?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Fluffy steamed buns filled with sweet savory barbecued pork."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c3" },
+    "menuItemName": "Xiao Long Bao",
+    "menuItemPrice": 20,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1617025875224-34c9c1044458?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Soup dumplings filled with pork and hot savory broth."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c3" },
+    "menuItemName": "Mango Sticky Rice",
+    "menuItemPrice": 12,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1601633512303-34676442654f?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Sweet glutinous rice with coconut milk and fresh ripe mango."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c4" },
+    "menuItemName": "Grilled Octopus",
+    "menuItemPrice": 38,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1606850779774-6721846b0a1d?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Char-grilled octopus tentacle served with lemon, olive oil and herbs."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c4" },
+    "menuItemName": "Greek Salad Platter",
+    "menuItemPrice": 22,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Cucumber, tomato, kalamata olives, and a large block of feta cheese."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c4" },
+    "menuItemName": "Lamb Chops",
+    "menuItemPrice": 48,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Herb-crusted lamb chops grilled to perfection with tzatziki."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c4" },
+    "menuItemName": "Seafood Paella",
+    "menuItemPrice": 55,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1534080564583-6be75777b70a?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Mediterranean rice dish with saffron, mussels, shrimp, and squid."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c4" },
+    "menuItemName": "Baklava",
+    "menuItemPrice": 14,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1596711683786-9a2eb833cb9e?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Phyllo pastry filled with chopped nuts and soaked in honey syrup."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c5" },
+    "menuItemName": "Tomahawk Ribeye",
+    "menuItemPrice": 130,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1546833998-877b37c2e5c4?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "32oz bone-in ribeye steak, dry-aged for 45 days."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c5" },
+    "menuItemName": "Jumbo Shrimp Cocktail",
+    "menuItemPrice": 32,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Chilled colossal shrimp served with spicy cocktail sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c5" },
+    "menuItemName": "Creamed Spinach",
+    "menuItemPrice": 16,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1594924761081-42cb1a868945?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Fresh spinach in a rich nutmeg-infused cream sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c5" },
+    "menuItemName": "Filet Mignon",
+    "menuItemPrice": 65,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1616670826960-464a9386d345?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "8oz tenderloin steak, the most tender cut, grilled to your liking."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c5" },
+    "menuItemName": "NY Cheesecake",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1524351199678-941a58a3df50?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Classic dense cheesecake with a graham cracker crust and berry compote."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c6" },
+    "menuItemName": "Pad Thai Royal",
+    "menuItemPrice": 24,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1559314809-0d155014e29e?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Stir-fried rice noodles with jumbo prawns, egg, peanuts, and tamarind."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c6" },
+    "menuItemName": "Tom Yum Goong",
+    "menuItemPrice": 22,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1548943487-a2e4e43b485c?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Spicy and sour prawn soup with lemongrass, galangal, and kaffir lime."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c6" },
+    "menuItemName": "Green Curry Chicken",
+    "menuItemPrice": 26,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1623580556276-80f0891d4e0e?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Chicken breast simmered in green chili paste and coconut milk with basil."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c6" },
+    "menuItemName": "Papaya Salad (Som Tum)",
+    "menuItemPrice": 16,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1626804475297-411d866601df?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Shredded green papaya with chilies, lime, and crushed peanuts."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c6" },
+    "menuItemName": "Thai Iced Tea",
+    "menuItemPrice": 8,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1499638472904-ea5c6178a300?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Sweet orange Ceylon tea with condensed milk and ice."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c7" },
+    "menuItemName": "Almond Croissant",
+    "menuItemPrice": 8,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1555507036-ab1f40388085?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Flaky croissant filled with almond cream and topped with sliced almonds."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c7" },
+    "menuItemName": "Croque Monsieur",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1631454536648-936b856e7193?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Hot sandwich with ham and cheese, covered in béchamel sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c7" },
+    "menuItemName": "Pain au Chocolat",
+    "menuItemPrice": 7,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Puff pastry roll filled with dark chocolate batons."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c7" },
+    "menuItemName": "French Onion Soup",
+    "menuItemPrice": 16,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Rich caramelized onion broth topped with a baguette crouton and melted cheese."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c7" },
+    "menuItemName": "Macaron Assortment",
+    "menuItemPrice": 22,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1569864358642-9d1684040f43?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Box of 6 artisan macarons in flavors like pistachio, rose, and caramel."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c8" },
+    "menuItemName": "Galbi (Short Ribs)",
+    "menuItemPrice": 38,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1616428787723-d8c365313a37?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Marinated beef short ribs grilled at your table."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c8" },
+    "menuItemName": "Bibimbap",
+    "menuItemPrice": 24,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1583225216668-3d89d6d53956?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Rice bowl with vegetables, beef, egg, and spicy gochujang sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c8" },
+    "menuItemName": "Kimchi Jjigae",
+    "menuItemPrice": 20,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1583223668388-349f4b163d76?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Spicy kimchi stew with tofu, scallions, and pork belly."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c8" },
+    "menuItemName": "Korean Fried Chicken",
+    "menuItemPrice": 26,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Double-fried crispy chicken glazed in sticky sweet garlic soy sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c8" },
+    "menuItemName": "Bingsu",
+    "menuItemPrice": 16,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1575252875150-1df3e3b74938?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Shaved ice dessert with sweet red beans and condensed milk."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c9" },
+    "menuItemName": "Beyond Classic Burger",
+    "menuItemPrice": 22,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Plant-based patty with vegan cheese, lettuce, and tomato on a whole wheat bun."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c9" },
+    "menuItemName": "Cauliflower Wings",
+    "menuItemPrice": 16,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1623961990059-28356e226a77?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Battered cauliflower florets tossed in buffalo sauce with vegan ranch."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c9" },
+    "menuItemName": "Quinoa Power Bowl",
+    "menuItemPrice": 20,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1543362906-acfc16c67564?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Quinoa, chickpeas, roasted veggies, and tahini maple dressing."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c9" },
+    "menuItemName": "Vegan Mac & Cheese",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1596451633469-8260a92d1920?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Pasta in a creamy sauce made from cashews and nutritional yeast."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28c9" },
+    "menuItemName": "Raw Chocolate Tart",
+    "menuItemPrice": 14,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1509456385413-5a7a97637841?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "No-bake chocolate tart with a date and nut crust."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28ca" },
+    "menuItemName": "Pho Dac Biet (Special)",
+    "menuItemPrice": 22,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1582878826618-c05326eff935?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Rice noodle soup with rare steak, brisket, tendon, and meatballs."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28ca" },
+    "menuItemName": "Banh Mi Sandwich",
+    "menuItemPrice": 14,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1600454309261-3dc9b7597637?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Baguette filled with paté, pork roll, pickled carrots, and cilantro."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28ca" },
+    "menuItemName": "Fresh Spring Rolls",
+    "menuItemPrice": 10,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Rice paper rolls filled with shrimp, pork, herbs, and vermicelli."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28ca" },
+    "menuItemName": "Grilled Pork Vermicelli",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Dry noodle bowl with grilled lemongrass pork, herbs, and fish sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28ca" },
+    "menuItemName": "Vietnamese Iced Coffee",
+    "menuItemPrice": 8,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1599395066928-875f56b57700?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Strong drip coffee mixed with sweet condensed milk over ice."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cb" },
+    "menuItemName": "Jamón Ibérico Platter",
+    "menuItemPrice": 45,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1574045558021-3e4b476e3d23?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Premium cured ham from acorn-fed pigs, served with manchego cheese."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cb" },
+    "menuItemName": "Patatas Bravas",
+    "menuItemPrice": 12,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1555126634-323283e090fa?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Fried potato cubes served with spicy tomato sauce and aioli."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cb" },
+    "menuItemName": "Gambas al Ajillo",
+    "menuItemPrice": 24,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1559181567-c3190ca9959b?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Sizzling shrimp cooked in olive oil with plenty of garlic and chili."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cb" },
+    "menuItemName": "Vegetable Paella",
+    "menuItemPrice": 30,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Saffron rice cooked with artichokes, peppers, peas, and beans."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cb" },
+    "menuItemName": "Crema Catalana",
+    "menuItemPrice": 12,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1542283915-d729c1532cb1?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Spanish citrus-infused custard with a burnt sugar crust."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cc" },
+    "menuItemName": "Texas Smoked Brisket",
+    "menuItemPrice": 34,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Half-pound of slow-smoked moist brisket with house BBQ sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cc" },
+    "menuItemName": "St. Louis Ribs",
+    "menuItemPrice": 32,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1544025162-d76690b67f11?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Half rack of pork spare ribs dry-rubbed and smoked to tenderness."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cc" },
+    "menuItemName": "Pulled Pork Sandwich",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1628294896516-3444223a6f1b?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Tender pulled pork shoulder on a bun with coleslaw and pickles."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cc" },
+    "menuItemName": "Mac n Cheese",
+    "menuItemPrice": 12,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Three-cheese macaroni baked with a breadcrumb topping."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cc" },
+    "menuItemName": "Cornbread Skillet",
+    "menuItemPrice": 10,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1605333501306-44477c75a408?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Warm sweet cornbread served with honey butter."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cd" },
+    "menuItemName": "Pistachio Gelato",
+    "menuItemPrice": 10,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1580915411954-282cb1b0d780?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Creamy gelato made with real Sicilian pistachios."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cd" },
+    "menuItemName": "Dark Chocolate Sorbet",
+    "menuItemPrice": 10,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Intense dairy-free chocolate frozen treat."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cd" },
+    "menuItemName": "Gelato Brioche Sandwich",
+    "menuItemPrice": 14,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1505394033641-40c6ad1178d1?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Two scoops of gelato stuffed inside a warm brioche bun."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cd" },
+    "menuItemName": "Affogato",
+    "menuItemPrice": 12,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Vanilla bean gelato drowned in a shot of hot espresso."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cd" },
+    "menuItemName": "Waffle Cone Sundae",
+    "menuItemPrice": 16,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1558500155-25b8109d9361?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Large cone with 3 scoops, whipped cream, sprinkles, and cherry."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28ce" },
+    "menuItemName": "Flat White",
+    "menuItemPrice": 6,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1459755486867-b55449bb39ff?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Double shot of espresso with micro-foamed milk."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28ce" },
+    "menuItemName": "Smashed Avo Toast",
+    "menuItemPrice": 16,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1603048588665-791ca8aea617?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Avocado on sourdough with feta, dukkah, and lemon."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28ce" },
+    "menuItemName": "Eggs Benedict",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Poached eggs and ham on english muffin with hollandaise sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28ce" },
+    "menuItemName": "Berry Pancakes",
+    "menuItemPrice": 16,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Fluffy stack of pancakes topped with mixed berry compote and syrup."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28ce" },
+    "menuItemName": "Matcha Latte",
+    "menuItemPrice": 7,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1536304575304-7a32587063f1?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Green tea powder whisked with steamed oat milk."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cf" },
+    "menuItemName": "Kung Pao Chicken",
+    "menuItemPrice": 22,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Stir-fried chicken with peanuts, vegetables, and chili peppers."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cf" },
+    "menuItemName": "Beef and Broccoli",
+    "menuItemPrice": 24,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1563245372-f21720e32c4d?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Tender beef slices stir-fried with fresh broccoli in brown sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cf" },
+    "menuItemName": "Vegetable Spring Rolls",
+    "menuItemPrice": 10,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1544510802-36e6cb2a4a9c?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Crispy fried rolls filled with cabbage, carrots, and glass noodles."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cf" },
+    "menuItemName": "Shrimp Fried Rice",
+    "menuItemPrice": 20,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1603133872878-684f208fb74b?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Wok-fried rice with shrimp, peas, carrots, and egg."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28cf" },
+    "menuItemName": "General Tso's Chicken",
+    "menuItemPrice": 22,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1626804475315-1a8c3817f594?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Deep-fried chicken pieces in a sweet and spicy glaze."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d0" },
+    "menuItemName": "Picanha Skewers",
+    "menuItemPrice": 45,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Top sirloin cap steak seasoned with rock salt and grilled over fire."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d0" },
+    "menuItemName": "Feijoada",
+    "menuItemPrice": 30,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1544025162-d76690b67f11?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Traditional Brazilian black bean stew with sausage and pork."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d0" },
+    "menuItemName": "Cheese Bread (Pão de Queijo)",
+    "menuItemPrice": 12,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1596627008779-79f886f6f96f?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Warm, chewy cheese buns made with tapioca flour."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d0" },
+    "menuItemName": "Grilled Pineapple",
+    "menuItemPrice": 14,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1596626668748-03876e481df8?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Warm pineapple dusted with cinnamon and sugar."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d0" },
+    "menuItemName": "Caipirinha",
+    "menuItemPrice": 16,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1541546339599-ecdbfcf77378?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Brazil's national cocktail made with cachaça, sugar, and lime."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d1" },
+    "menuItemName": "Smoked Salmon Toast",
+    "menuItemPrice": 22,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1519708227418-c8fd9a3a277d?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Cold smoked salmon on rye bread with dill cream cheese."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d1" },
+    "menuItemName": "Fish and Chips",
+    "menuItemPrice": 24,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1579208575657-c595a05383b7?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Beer-battered cod served with thick-cut fries and tartar sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d1" },
+    "menuItemName": "Lobster Bisque",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Creamy soup made with lobster stock and heavy cream."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d1" },
+    "menuItemName": "Grilled Sea Bass",
+    "menuItemPrice": 38,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Fillet of sea bass grilled with lemon butter and herbs."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d1" },
+    "menuItemName": "Shrimp Skagen",
+    "menuItemPrice": 20,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Swedish shrimp toast with mayonnaise, dill, and roe."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d2" },
+    "menuItemName": "Falafel Pita",
+    "menuItemPrice": 14,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1593001872095-7d5b3868d1b3?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Warm pita filled with falafel, hummus, salad, and tahini."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d2" },
+    "menuItemName": "Hummus & Lamb",
+    "menuItemPrice": 22,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1549488344-c3569680c651?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Creamy hummus topped with spiced ground lamb and pine nuts."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d2" },
+    "menuItemName": "Shakshuka",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1590412200988-a436970781fa?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Poached eggs in a spicy tomato and pepper sauce."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d2" },
+    "menuItemName": "Tabbouleh Salad",
+    "menuItemPrice": 12,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1529312266912-b33cf6227e2f?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Parsley salad with bulgur, mint, tomato, and lemon dressing."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d2" },
+    "menuItemName": "Babaganoush",
+    "menuItemPrice": 12,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1528751014936-863e6e7a319c?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Smoky roasted eggplant dip served with flatbread."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d3" },
+    "menuItemName": "Cheese Fondue Pot",
+    "menuItemPrice": 55,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Melted Gruyère and Emmental cheese with white wine, served with bread."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d3" },
+    "menuItemName": "Raclette Plate",
+    "menuItemPrice": 32,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1551268685-6f8df59f37c3?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Melted raclette cheese scraped over potatoes, pickles, and cured meats."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d3" },
+    "menuItemName": "Veal Zurich Style",
+    "menuItemPrice": 42,
+    "menuItemCategory": "Main Course",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1544379379-e58f05e1a2f6?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Sliced veal in a creamy mushroom white wine sauce with rosti."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d3" },
+    "menuItemName": "Rosti",
+    "menuItemPrice": 18,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1628155250462-212d264560d2?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Crispy Swiss potato pancake fried in butter."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d3" },
+    "menuItemName": "Chocolate Fondue",
+    "menuItemPrice": 28,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1582235946114-1d374591a38e?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Warm melted Swiss chocolate served with fruit and marshmallows."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d4" },
+    "menuItemName": "Maple Bacon Donut",
+    "menuItemPrice": 6,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": false,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1551024601-5637ade984d2?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Yeast donut topped with maple glaze and crispy bacon bits."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d4" },
+    "menuItemName": "Glazed Dozen Box",
+    "menuItemPrice": 24,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1533749047139-1d599591b0be?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "A box of 12 classic honey-glazed yeast donuts."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d4" },
+    "menuItemName": "Boston Cream",
+    "menuItemPrice": 5,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1616031036573-04b3917462a6?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Filled with vanilla custard and topped with chocolate ganache."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d4" },
+    "menuItemName": "Strawberry Sprinkle",
+    "menuItemPrice": 5,
+    "menuItemCategory": "Dessert",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1514517220017-8ce97a34a7b6?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Pink strawberry icing with colorful rainbow sprinkles."
+  },
+  {
+    "restaurantId": { "$oid": "696e6e3e461ed0a1481a28d4" },
+    "menuItemName": "Coffee & Donut Combo",
+    "menuItemPrice": 8,
+    "menuItemCategory": "Starter",
+    "isMenuItemVeg": true,
+    "isMenuItemAvailable": true,
+    "menuItemImage": "https://images.unsplash.com/photo-1516054575922-f0b8eeadec1a?q=80&w=1000&auto=format&fit=crop",
+    "menuItemDescription": "Any classic donut served with a large hot brew coffee."
+  }
+]

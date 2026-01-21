@@ -1,12 +1,12 @@
 import React, { useState, useMemo, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import RestaurantFilters from "./RestaurantFilters";
-import { Search, Loader2, ChevronLeft, ChevronRight } from "lucide-react";
+import { Search, Loader2 } from "lucide-react";
+import PaginationControls from "./PaginationControls";
 import Navbar from "../HomePage/Navbar";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
+import axiosInstance from "../api/axiosInstance";
 import { addRestaurants } from "../utils/restaurantSlice";
-import { BASE_URL } from "../utils/constants";
 
 const Restaurants = () => {
   const dispatch = useDispatch();
@@ -32,11 +32,8 @@ const Restaurants = () => {
     const fetchRestaurants = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(
-          `${BASE_URL}/api/v1/restaurants?page=${page}&limit=${limit}`,
-          {
-            withCredentials: true,
-          },
+        const response = await axiosInstance.get(
+          `/api/v1/restaurants?page=${page}&limit=${limit}`,
         );
         dispatch(addRestaurants(response.data));
         setLoading(false);
@@ -198,64 +195,11 @@ const Restaurants = () => {
         )}
 
         {/* Premium Pagination Controls */}
-        {meta?.totalPages > 1 && (
-          <div className="flex justify-center items-center mt-16 pb-8 gap-3">
-            <button
-              onClick={() => handlePageChange(page - 1)}
-              disabled={page === 1}
-              className={`
-                        flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 border
-                        ${
-                          page === 1
-                            ? "border-gray-100 text-gray-300 cursor-not-allowed bg-gray-50"
-                            : "border-gray-200 text-gray-700 hover:border-[#04b235] hover:bg-white hover:text-[#04b235] hover:shadow-sm active:scale-95"
-                        }
-                    `}
-            >
-              <ChevronLeft className="w-4 h-4" />
-              Previous
-            </button>
-
-            <div className="flex items-center gap-1.5 bg-gray-50/50 p-1.5 rounded-full border border-gray-100/50">
-              {[...Array(meta.totalPages)].map((_, index) => {
-                const p = index + 1;
-                const isCurrent = page === p;
-                return (
-                  <button
-                    key={p}
-                    onClick={() => handlePageChange(p)}
-                    className={`
-                                    w-9 h-9 rounded-full text-sm font-bold flex items-center justify-center transition-all duration-200
-                                    ${
-                                      isCurrent
-                                        ? "bg-[#04b235] text-white shadow-md transform scale-105 shadow-green-200"
-                                        : "text-gray-500 hover:bg-white hover:text-[#04b235] hover:shadow-xs"
-                                    }
-                                `}
-                  >
-                    {p}
-                  </button>
-                );
-              })}
-            </div>
-
-            <button
-              onClick={() => handlePageChange(page + 1)}
-              disabled={page === meta.totalPages}
-              className={`
-                        flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 border
-                        ${
-                          page === meta.totalPages
-                            ? "border-gray-100 text-gray-300 cursor-not-allowed bg-gray-50"
-                            : "border-gray-200 text-gray-700 hover:border-[#04b235] hover:bg-white hover:text-[#04b235] hover:shadow-sm active:scale-95"
-                        }
-                    `}
-            >
-              Next
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-        )}
+        <PaginationControls
+          page={page}
+          totalPages={meta?.totalPages}
+          onPageChange={handlePageChange}
+        />
       </div>
     </div>
   );

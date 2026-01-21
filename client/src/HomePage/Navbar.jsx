@@ -44,18 +44,18 @@ const Navbar = () => {
           >
             Restaurants
           </Link>
-          <a
-            href="#"
+          <Link
+            to="/orders"
             className="hover:text-[#00982b] transition-colors hover:font-medium"
           >
             Orders
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/about"
             className="hover:text-[#00982b] transition-colors hover:font-medium"
           >
             About
-          </a>
+          </Link>
         </div>
 
         {/* Right Icons */}

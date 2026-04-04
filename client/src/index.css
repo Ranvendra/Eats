@@ -2,11 +2,27 @@
 
 @theme {
   --font-poppins: "Poppins", sans-serif;
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
 }
 
 body {
   font-family: var(--font-poppins);
   overflow-x: hidden;
+}
+
+.menu-page-theme {
+  font-family: var(--font-body);
+}
+
+.menu-page-theme h1,
+.menu-page-theme h2,
+.menu-page-theme h3,
+.menu-page-theme h4,
+.menu-page-theme h5,
+.menu-page-theme h6 {
+  font-family: var(--font-headline);
 }
 
 @keyframes float {

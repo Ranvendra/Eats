@@ -43,6 +43,26 @@ const userSchema = new mongoose.Schema(
             type: String,
             default: "",
         },
+        nickName: {
+            type: String,
+            default: "",
+        },
+        gender: {
+            type: String,
+            default: "",
+        },
+        country: {
+            type: String,
+            default: "",
+        },
+        language: {
+            type: String,
+            default: "",
+        },
+        timeZone: {
+            type: String,
+            default: "",
+        },
         profilePicture: {
             type: String,
             default: "", // URL to profile picture

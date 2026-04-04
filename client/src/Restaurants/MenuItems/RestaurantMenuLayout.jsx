@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../HomePage/Navbar";
-import RestaurantHero from "./RestaurantHero";
 import CategorySidebar from "./CategorySidebar";
 import MenuItemCard from "./MenuItemCard";
 
@@ -12,7 +11,9 @@ const RestaurantMenuLayout = ({ restaurant, categories }) => {
   // Update active category on scroll or mount if categories change
   useEffect(() => {
     if (categories?.length > 0 && !activeCategory) {
-      setActiveCategory(categories[0][0]);
+      setTimeout(() => {
+        setActiveCategory(categories[0][0]);
+      }, 0);
     }
   }, [categories, activeCategory]);
 
@@ -26,16 +27,15 @@ const RestaurantMenuLayout = ({ restaurant, categories }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50/50 font-poppins">
+    <div className="min-h-screen bg-gray-50/50 menu-page-theme">
       <div className="sticky top-0 z-50 bg-white shadow-sm">
         <Navbar />
       </div>
 
-      <RestaurantHero restaurant={restaurant} />
 
       {/* Main Content Layout */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-2 lg:px-2 py-8 relative z-10 mr-35">
+        <div className="flex flex-col lg:flex-row gap-15">
           <CategorySidebar
             categories={categories}
             activeCategory={activeCategory}
@@ -46,15 +46,25 @@ const RestaurantMenuLayout = ({ restaurant, categories }) => {
           <div className="flex-1">
             <div className="space-y-12">
               {categories.map(([category, items]) => (
-                <div key={category} id={category} className="scroll-mt-28">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-end gap-3">
-                    {category}
-                    <div className="h-0.5 flex-1 bg-gray-100 rounded-full mb-1.5"></div>
-                  </h2>
+                <div key={category} id={category} className="scroll-mt-32">
+                  <div className="mb-6 flex items-start gap-4 justify-between">
+                    <div className="inline-block relative">
+                       <h2 className="text-3xl font-black text-gray-900 leading-tight">
+                         {category}
+                       </h2>
+                       <div className="h-1 w-full bg-[#04b235] rounded-full mt-1"></div>
+                    </div>
+                    {/* Optional Right-aligned Tags (Like the design: LOW CARB, ORGANIC) */}
+                    <div className="hidden sm:flex gap-2 self-center">
+                        <span className="text-[10px] font-bold text-[#04b235] border border-gray-200 px-4 py-1 rounded-full uppercase">
+                           Fresh
+                        </span>
+                    </div>
+                  </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                  <div className="flex flex-col gap-6">
                     {items.map((item) => (
-                      <MenuItemCard key={item._id} item={item} />
+                      <MenuItemCard key={item._id} item={item} restaurantId={restaurant?._id} restaurantName={restaurant?.restaurantName} />
                     ))}
                   </div>
                 </div>

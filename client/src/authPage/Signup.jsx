@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { authApi } from "../api/authApi";
 import { useToast } from "../Toast/ToastContext";
-
-const Signup = () => {
+const Signup = ({ onClose }) => {
   const { addToast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     userPhone: "8381674598",
     userName: "Ranvendra Pratap Singh",
@@ -17,6 +17,7 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     try {
       if (
         !formData.userPhone ||
@@ -28,23 +29,18 @@ const Signup = () => {
         return;
       }
 
-      const response = await authApi.signup({
+      await authApi.signup({
         ...formData,
         userPhone: formData.userPhone,
       });
 
-      addToast("Signup Successful! Please Login.", "success");
-
-      setFormData({
-        userPhone: "",
-        userName: "",
-        userEmail: "",
-        password: "",
-      });
-      console.log("Signup success:", response);
+      addToast("Account created! Welcome to Eats 🎉", "success");
+      setFormData({ userPhone: "", userName: "", userEmail: "", password: "" });
+      if (onClose) onClose();
     } catch (err) {
       addToast(err?.message || "Signup failed. Please try again.", "error");
-      console.error("Signup Error:", err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -105,9 +101,10 @@ const Signup = () => {
         {/* Continue Button */}
         <button
           type="submit"
-          className="w-full bg-[#04b235] text-white font-semibold py-3.5 rounded-lg uppercase tracking-wide hover:bg-[#039f2f] transition-all shadow-md text-[14px] mt-3 active:scale-[0.98]"
+          disabled={isLoading}
+          className="w-full bg-[#04b235] text-white font-semibold py-3.5 rounded-lg uppercase tracking-wide hover:bg-[#039f2f] transition-all shadow-md text-[14px] mt-3 active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
         >
-          Continue
+          {isLoading ? "Creating account..." : "Continue"}
         </button>
 
         <p className="text-[11px] text-gray-500 font-normal text-center mt-1 leading-relaxed">

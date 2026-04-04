@@ -6,7 +6,7 @@ const menuItemSchema = new mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: "Restaurant",
             required: true,
-            index: true, // Indexed for faster lookups by restaurant
+            index: true,
         },
         menuItemName: {
             type: String,
@@ -21,7 +21,7 @@ const menuItemSchema = new mongoose.Schema(
         },
         menuItemCategory: {
             type: String,
-            required: true, // e.g., 'Starter', 'Main Course', 'Dessert'
+            required: true,
             trim: true,
         },
         isMenuItemVeg: {
@@ -39,12 +39,29 @@ const menuItemSchema = new mongoose.Schema(
         menuItemDescription: {
             type: String,
             default: "",
-            maxLength: 150,
+            maxLength: 200,
+        },
+        menuItemRating: {
+            type: Number,
+            default: 0,
+            min: 0,
+            max: 5,
+        },
+        menuItemCalories: {
+            type: Number,
+            default: null, // optional — null if not provided
+        },
+        menuItemServes: {
+            type: String,
+            default: "1", // e.g. "2-3 people"
         },
     },
     {
         timestamps: true,
     }
 );
+
+// Compound index — fast lookups for "all menu items for restaurant X in category Y"
+menuItemSchema.index({ restaurantId: 1, menuItemCategory: 1 });
 
 module.exports = mongoose.model("MenuItem", menuItemSchema);

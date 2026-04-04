@@ -15,9 +15,15 @@ app.use(express.json());
 app.use(cookieParser());
 
 const restaurantRouter = require("./routes/restaurantRouter");
+const paymentRouter = require("./routes/paymentRouter");
+const orderRouter = require("./routes/orderRouter");
+const cartRouter = require("./routes/cartRouter");
 
 app.use("/", authRouter);
 app.use("/api/v1/restaurants", restaurantRouter);
+app.use("/api/v1/payments", paymentRouter);
+app.use("/api/v1/orders", orderRouter);
+app.use("/api/v1/cart", cartRouter);
 
 // Test route
 app.get("/", (req, res) => {

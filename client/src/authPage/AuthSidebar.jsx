@@ -81,7 +81,7 @@ const AuthSidebar = ({ isOpen, onClose }) => {
           <div className="w-10 h-[2px] bg-gray-800 mb-6"></div>
 
           {/* Component View */}
-          {view === "login" ? <Login /> : <Signup />}
+          {view === "login" ? <Login onClose={handleClose} /> : <Signup onClose={handleClose} />}
         </div>
       </div>
     </>

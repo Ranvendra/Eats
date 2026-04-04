@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { authApi } from "../api/authApi";
 import { useToast } from "../Toast/ToastContext";
+import { useDispatch } from "react-redux";
+import { loginSuccess } from "../utils/userSlice";
 
-const Login = () => {
+const Login = ({ onClose }) => {
   const { addToast } = useToast();
+  const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     identifier: "ranvendra.singh2024@nst.rishihood.edu.in",
     password: "N8bae991#*",
@@ -15,6 +19,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     try {
       if (!formData.identifier || !formData.password) {
         addToast("All fields are required", "error");
@@ -22,11 +27,13 @@ const Login = () => {
       }
 
       const response = await authApi.login(formData);
-      addToast("Login Successful!", "success");
-      console.log("Login success, user:", response);
+      dispatch(loginSuccess(response.data || response.user || response));
+      addToast("Welcome back! You're logged in.", "success");
+      if (onClose) onClose();
     } catch (err) {
       addToast(err?.message || "Login failed. Please try again.", "error");
-      console.error("Login Error:", err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -60,9 +67,10 @@ const Login = () => {
         {/* Login Button */}
         <button
           type="submit"
-          className="w-full bg-[#04b235] text-white font-semibold py-3.5 rounded-lg uppercase tracking-wide hover:bg-[#039f2f] transition-all shadow-md text-[14px] mt-2 active:scale-[0.98]"
+          disabled={isLoading}
+          className="w-full bg-[#04b235] text-white font-semibold py-3.5 rounded-lg uppercase tracking-wide hover:bg-[#039f2f] transition-all shadow-md text-[14px] mt-2 active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
         >
-          Login
+          {isLoading ? "Signing in..." : "Login"}
         </button>
 
         <p className="text-[11px] text-gray-500 font-normal text-center mt-2 leading-relaxed">

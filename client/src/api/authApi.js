@@ -7,7 +7,8 @@ export const authApi = {
             const response = await axiosInstance.post("/signup", userData);
             return response.data;
         } catch (error) {
-            throw error.response?.data || "Signup failed";
+            const msg = error.response?.data?.message;
+            throw new Error(msg || "Signup failed. Please try again.");
         }
     },
 
@@ -17,7 +18,8 @@ export const authApi = {
             const response = await axiosInstance.post("/login", credentials);
             return response.data;
         } catch (error) {
-            throw error.response?.data || "Login failed";
+            const msg = error.response?.data?.message;
+            throw new Error(msg || "Login failed. Please try again.");
         }
     },
 
@@ -37,7 +39,19 @@ export const authApi = {
             const response = await axiosInstance.get("/profile");
             return response.data;
         } catch (error) {
-            throw error.response?.data || "Failed to fetch profile";
+            throw new Error(error.response?.data?.message || "Session expired. Please login again.");
+        }
+    },
+
+    updateProfile: async (formData) => {
+        try {
+            // Do NOT manually set Content-Type — axios will auto-set
+            // multipart/form-data with the correct boundary when given FormData
+            const response = await axiosInstance.patch("/profile", formData);
+            return response.data;
+        } catch (error) {
+            const msg = error.response?.data?.message;
+            throw new Error(msg || "Could not update profile. Please try again.");
         }
     },
 };

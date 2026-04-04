@@ -1,5 +1,7 @@
 const authService = require("../services/authService");
 const { validateSignUpData, validateLoginData } = require("../utils/validation");
+const { uploadToCloudinary } = require("../config/cloudinary");
+const User = require("../models/User");
 
 const handleSignup = async (req, res) => {
     try {
@@ -19,6 +21,12 @@ const handleSignup = async (req, res) => {
 
         res.status(201).json({ message: "User added successfully!", data: userResponse });
     } catch (err) {
+        // Friendly duplicate field error
+        if (err.code === 11000) {
+            const field = Object.keys(err.keyValue)[0];
+            const friendly = field === "userEmail" ? "email address" : "phone number";
+            return res.status(400).json({ message: `This ${friendly} is already registered. Please login instead.` });
+        }
         res.status(400).json({ message: err.message });
     }
 };
@@ -41,7 +49,10 @@ const handleLogin = async (req, res) => {
 
         res.json({ message: "Login Successful!!", data: userResponse });
     } catch (err) {
-        res.status(400).json({ message: err.message });
+        const message = err.message === "Invalid credentials"
+            ? "Incorrect email/phone or password. Please try again."
+            : err.message;
+        res.status(400).json({ message });
     }
 };
 
@@ -61,7 +72,49 @@ const handleProfile = async (req, res) => {
 
         res.json({ message: "Profile fetched successfully", data: userResponse });
     } catch (err) {
-        res.status(400).json({ message: "Error fetching profile: " + err.message });
+        res.status(400).json({ message: "Could not load profile. Please try again." });
+    }
+};
+
+const handleProfileUpdate = async (req, res) => {
+    try {
+        const user = req.user;
+        const { userName, userPhone, userAddress, userCity, nickName, gender, country, language, timeZone } = req.body;
+
+        // Build only valid updated fields
+        const updates = {};
+        if (userName && userName.trim()) updates.userName = userName.trim();
+        if (userPhone && userPhone.trim()) updates.userPhone = userPhone.trim();
+        if (userAddress !== undefined) updates.userAddress = userAddress;
+        if (userCity !== undefined) updates.userCity = userCity;
+        if (nickName !== undefined) updates.nickName = nickName;
+        if (gender !== undefined) updates.gender = gender;
+        if (country !== undefined) updates.country = country;
+        if (language !== undefined) updates.language = language;
+        if (timeZone !== undefined) updates.timeZone = timeZone;
+
+        // Handle profile picture upload via Cloudinary
+        if (req.file) {
+            const imageUrl = await uploadToCloudinary(req.file.buffer, "eats/profiles");
+            updates.profilePicture = imageUrl;
+        }
+
+        const updatedUser = await User.findByIdAndUpdate(
+            user._id,
+            { $set: updates },
+            { new: true, runValidators: true }
+        );
+
+        const userResponse = updatedUser.toObject();
+        delete userResponse.password;
+
+        res.json({ message: "Profile updated successfully!", data: userResponse });
+    } catch (err) {
+        console.error("Profile update error:", err); // Helps debug Cloudinary issues
+        if (err.code === 11000) {
+            return res.status(400).json({ message: "That phone number is already in use by another account." });
+        }
+        res.status(400).json({ message: err.message || "Could not update profile. Please try again." });
     }
 };
 
@@ -70,4 +123,5 @@ module.exports = {
     handleLogin,
     handleLogout,
     handleProfile,
+    handleProfileUpdate,
 };

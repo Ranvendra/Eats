@@ -1,51 +1,60 @@
 import React from "react";
+import { Utensils } from "lucide-react";
 
 const CategorySidebar = ({ categories, activeCategory, scrollToCategory }) => {
   return (
     <>
       {/* Left Sidebar (Sticky Category Nav) - Desktop Only */}
-      <div className="hidden lg:block w-48 shrink-0">
+      <div className="lg:block w-56 shrink-0">
         <div className="sticky top-28 space-y-1 max-h-[calc(100vh-120px)] overflow-y-auto pr-2 scrollbar-hide">
-          <h3 className="text-sm font-black text-gray-800 uppercase tracking-wider mb-2 px-3">
-            Menu
-          </h3>
-          {categories.map(([category, items]) => (
-            <button
-              key={category}
-              onClick={() => scrollToCategory(category)}
-              className={`w-full text-left px-4 py-2.5 rounded-lg transition-all duration-300 flex justify-between items-center group text-sm
-                        ${
-                          activeCategory === category
-                            ? "bg-black text-white shadow-md"
-                            : "hover:bg-gray-100 text-gray-600 font-medium"
-                        }`}
-            >
-              <span>{category}</span>
-              <span
-                className={`text-xs px-2 py-0.5 rounded-full ${
-                  activeCategory === category
-                    ? "bg-white/20"
-                    : "bg-gray-200 text-gray-500"
-                }`}
+          <div className="mb-6 px-3">
+             <h3 className="text-2xl text-gray-800 font-extrabold tracking-tight">
+               Categories
+             </h3>
+             <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mt-1">
+               Freshly Prepared
+             </p>
+          </div>
+          {categories.map(([category]) => {
+            const isActive = activeCategory === category;
+            return (
+              <button
+                key={category}
+                onClick={() => scrollToCategory(category)}
+                className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-300 flex items-center gap-3 group text-sm
+                          ${
+                            isActive
+                              ? "bg-[#04b235]/10 text-[#04b235] font-bold shadow-[inset_0_0_0_1px_rgba(4,178,53,0.05)] border-l-4 border-[#04b235]"
+                              : "hover:bg-gray-50 text-gray-600 font-semibold border-l-4 border-transparent"
+                          }`}
               >
-                {items.length}
-              </span>
-            </button>
-          ))}
+                <Utensils size={16} className={isActive ? "text-[#00b935]" : "text-gray-400 group-hover:text-gray-600"} />
+                <span>{category}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
 
       {/* Mobile Horizontal Category Scroll */}
-      <div className="lg:hidden flex gap-3 overflow-x-auto pb-6 scrollbar-hide sticky top-20 z-40 bg-gray-50/50 backdrop-blur-sm -mx-4 px-4 pt-2">
-        {categories.map(([category, items]) => (
-          <button
-            key={category}
-            onClick={() => scrollToCategory(category)}
-            className="whitespace-nowrap px-6 py-2 bg-white border border-gray-200 rounded-full shadow-sm text-sm font-bold text-gray-700 active:bg-black active:text-white transition-colors"
-          >
-            {category}
-          </button>
-        ))}
+      <div className="lg:hidden flex gap-3 overflow-x-auto pb-4 scrollbar-hide sticky top-20 z-40 bg-white/95 backdrop-blur -mx-4 px-4 pt-2 border-b border-gray-100">
+        {categories.map(([category]) => {
+            const isActive = activeCategory === category;
+            return (
+              <button
+                key={category}
+                onClick={() => scrollToCategory(category)}
+                className={`whitespace-nowrap px-5 py-2 rounded-full shadow-sm text-sm font-bold transition-colors flex items-center gap-2 border ${
+                    isActive 
+                    ? "bg-[#04b235]/10 border-[#04b235]/20 text-[#04b235]" 
+                    : "bg-white border-gray-200 text-gray-600 active:bg-gray-50"
+                }`}
+              >
+                <Utensils size={14} className={isActive ? "text-[#04b235]" : "text-gray-400"} />
+                {category}
+              </button>
+            )
+        })}
       </div>
     </>
   );

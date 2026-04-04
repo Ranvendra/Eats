@@ -11,16 +11,24 @@ const restaurantSchema = new mongoose.Schema(
         restaurantAddress: {
             type: String,
             required: true,
-            maxLength: 200,
+            maxLength: 300,
         },
         restaurantCity: {
             type: String,
             required: true,
             trim: true,
-            index: true, // Indexed for faster search by city
+            index: true,
+        },
+        restaurantPincode: {
+            type: String,
+            default: "",
+        },
+        restaurantPhone: {
+            type: String,
+            default: "",
         },
         restaurantCuisine: {
-            type: [String], // Array of strings for multiple cuisines
+            type: [String],
             required: true,
         },
         restaurantRating: {
@@ -29,9 +37,17 @@ const restaurantSchema = new mongoose.Schema(
             min: 0,
             max: 5,
         },
+        restaurantTotalRatings: {
+            type: Number,
+            default: 0, // tracks total number of ratings for averaging
+        },
         restaurantDeliveryTime: {
             type: Number, // In minutes
             required: true,
+        },
+        restaurantMinOrder: {
+            type: Number,
+            default: 0, // Minimum order amount in ₹
         },
         isRestaurantOpen: {
             type: Boolean,
@@ -44,22 +60,27 @@ const restaurantSchema = new mongoose.Schema(
         restaurantDescription: {
             type: String,
             default: "",
-            maxLength: 250,
+            maxLength: 500,
         },
         isRestaurantPromoted: {
             type: Boolean,
             default: false,
         },
         offer: {
-            type: String, // very short 2 -3 words.
-        }
+            type: String,
+            default: "", // e.g. "20% OFF" or "Free Delivery"
+        },
+        restaurantTags: {
+            type: [String],
+            default: [], // e.g. ["Budget", "Family Friendly", "Trending"]
+        },
     },
     {
         timestamps: true,
     }
 );
 
-// Optional: compound index if searching by city and cuisine often
+// Compound index for common query pattern: city + cuisine
 restaurantSchema.index({ restaurantCity: 1, restaurantCuisine: 1 });
 
 module.exports = mongoose.model("Restaurant", restaurantSchema);

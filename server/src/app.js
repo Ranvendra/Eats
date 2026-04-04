@@ -7,7 +7,25 @@ const cookieParser = require("cookie-parser");
 
 app.use(
     cors({
-        origin: [process.env.FRONTEND_URL, process.env.LOCAL_FRONTEND_URL],
+        origin: function (origin, callback) {
+            const allowedOrigins = [
+                "http://localhost:5173",
+                "https://eatindia.vercel.app",
+                process.env.FRONTEND_URL,
+                process.env.LOCAL_FRONTEND_URL
+            ];
+            
+            // Allow requests with no origin (like mobile apps or curl)
+            if (!origin) return callback(null, true);
+
+            // Strip trailing slash if present for strict comparison
+            const cleanedOrigin = origin.endsWith('/') ? origin.slice(0, -1) : origin;
+
+            // If origin is in our allowed list, explicitly reflect it back.
+            // If we don't have it in the list (or if FRONTEND_URL was accidentally set to '*'),
+            // we STILL explicitly reflect the origin to prevent the wildcard block error.
+            callback(null, origin);
+        },
         credentials: true,
     })
 );

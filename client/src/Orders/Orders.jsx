@@ -34,8 +34,8 @@ const Orders = () => {
         <Navbar />
       </div>
 
-      <main className="pt-24 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <main className="pt-10 pb-0 px-6">
+        <div className="max-w-3xl mx-auto">
           {/* Orders Feed */}
           <OrderHistory />
         </div>

@@ -102,12 +102,12 @@ const PastOrderItem = ({ order }) => {
       <div className="flex flex-col md:flex-row gap-8 items-start">
 
         {/* Left: Image Block — greyscale, colourises on hover (your original design) */}
-        <div className="w-full md:w-56 h-40 relative flex-shrink-0">
+        <div className="w-full md:w-56 h-40 relative shrink-0">
           {restaurantImage ? (
             <LazyImage
               src={restaurantImage}
               alt={restaurantName}
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              className="w-full h-full object-cover rounded-4xl group-hover:grayscale-0 transition-all duration-500"
             />
           ) : (
             <div className="w-full h-full bg-gray-100 flex items-center justify-center">
@@ -125,27 +125,27 @@ const PastOrderItem = ({ order }) => {
           {/* Header Row */}
           <div className="flex justify-between items-start">
             <div>
-              <h3 className="text-2xl font-bold text-black tracking-tight mb-1 group-hover:text-[#12b603] transition-colors">
+              <h3 className="text-2xl text-black tracking-tight mb-1 group-hover:text-[#12b603] transition-colors">
                 {restaurantName}
               </h3>
               <p className="text-xs font-bold uppercase tracking-widest text-gray-400">
                 {date}{restaurantAddress ? ` — ${restaurantAddress}` : ""}
               </p>
             </div>
-            <span className="text-xl font-medium text-black">₹{order.orderTotalAmount}</span>
+            <span className="text-xl font-medium text-gray-700">₹{order.orderTotalAmount}</span>
           </div>
 
           {/* Items List */}
           <div className="mt-4 md:mt-0">
-            <p className="text-sm font-medium text-gray-600 max-w-xl leading-relaxed">
-              {items.join(", ")}
+            <p className="text-sm pt-2 text-gray-600 max-w-xl leading-relaxed">
+              {items.join(`, `, " ")}
             </p>
           </div>
 
           {/* Action Bottom Row — animated line + Reorder button */}
           <div className="mt-auto pt-4 flex justify-between items-end">
             <div className="h-px w-24 bg-gray-300 group-hover:w-full group-hover:bg-[#12b603] transition-all duration-700 ease-in-out"></div>
-            <button className="flex items-center gap-2 text-black text-sm font-bold uppercase tracking-widest hover:text-[#12b603] transition-colors cursor-pointer">
+            <button className="flex items-center p-3 bg-[#d9ffd7] gap-2 rounded-t-xl text-black text-sm tracking-widest hover:text-[#0b8a00] transition-colors cursor-pointer">
               Reorder
               <ArrowUpRight size={16} />
             </button>

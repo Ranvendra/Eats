@@ -40,7 +40,7 @@ const OrderCard = ({ order }) => {
       <div className="p-8">
         <div className="flex justify-between items-start mb-6">
           <div>
-            <h3 className="text-2xl font-black text-gray-900 leading-tight mb-2 group-hover:text-[#12b603] transition-colors">
+            <h3 className="text-2xl text-gray-800 leading-tight mb-2 group-hover:text-[#12b603] transition-colors">
               {order.restaurantName}
             </h3>
             <p className="text-gray-500 text-sm font-medium">

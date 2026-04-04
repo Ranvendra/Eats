@@ -3,6 +3,9 @@ const { validateSignUpData, validateLoginData } = require("../utils/validation")
 const { uploadToCloudinary } = require("../config/cloudinary");
 const User = require("../models/User");
 
+// Support both NODE_ENV (standard) and isProd (our custom Render env var)
+const isProduction = process.env.NODE_ENV === "production" || process.env.isProd === "production";
+
 const handleSignup = async (req, res) => {
     try {
         validateSignUpData(req);
@@ -44,8 +47,8 @@ const handleLogin = async (req, res) => {
 
         res.cookie("token", token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",   // HTTPS only in production
-            sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // cross-domain in prod
+            secure: isProduction,          // HTTPS only in production (Render)
+            sameSite: isProduction ? "None" : "Lax", // cross-domain cookies need 'None' in prod
             expires: new Date(Date.now() + 7 * 24 * 3600000), // 7 days (matches JWT expiry)
         });
 
@@ -61,8 +64,8 @@ const handleLogin = async (req, res) => {
 const handleLogout = (req, res) => {
     res.cookie("token", "", {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
+        secure: isProduction,
+        sameSite: isProduction ? "None" : "Lax",
         expires: new Date(0), // Immediately expire the cookie
     });
     res.json({ message: "Logout Successful!!" });

@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
+
+// Support both NODE_ENV (standard) and isProd (our custom env variable on Render)
+const isProduction = process.env.NODE_ENV === "production" || process.env.isProd === "production";
 const authRouter = require("./routes/authRouter");
 const cookieParser = require("cookie-parser");
 

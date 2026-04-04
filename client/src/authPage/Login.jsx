@@ -9,8 +9,8 @@ const Login = ({ onClose }) => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
-    identifier: "ranvendra.singh2024@nst.rishihood.edu.in",
-    password: "N8bae991#*",
+    identifier: "",
+    password: "",
   });
 
   const handleChange = (e) => {

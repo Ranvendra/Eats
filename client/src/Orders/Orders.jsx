@@ -37,7 +37,6 @@ const Orders = () => {
       <main className="pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           {/* Orders Feed */}
-          {}
           <OrderHistory />
         </div>
       </main>

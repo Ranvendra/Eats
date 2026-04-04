@@ -16,16 +16,33 @@ import Profile from "./Profile/Profile";
 function App() {
   const dispatch = useDispatch();
   const isAuthenticated = useSelector((store) => store.user?.isAuthenticated);
+  // Tracks whether the initial page-load auth+cart fetch has completed,
+  // so the isAuthenticated watcher doesn't race and double-fetch.
+  const initialLoadDone = React.useRef(false);
 
-  // 1. Initial Load: Check Authentication Status
+  const fetchCart = React.useCallback(async () => {
+    try {
+      const cartRes = await axiosInstance.get('/api/v1/cart');
+      const savedCart = cartRes.data?.data;
+      if (savedCart && savedCart.items?.length > 0) {
+        dispatch(loadCart(savedCart));
+      } else {
+        dispatch(loadCart({ items: [], totalQuantity: 0, totalAmount: 0 }));
+      }
+    } catch {
+      dispatch(loadCart({ items: [], totalQuantity: 0, totalAmount: 0 }));
+    }
+  }, [dispatch]);
+
+  // 1. Initial Load: Check Auth + immediately load cart in same sequence
   useEffect(() => {
     const fetchUser = async () => {
       try {
         const response = await authApi.getProfile();
         const userData = response?.data || response?.user;
-
         if (userData) {
           dispatch(loginSuccess(userData));
+          await fetchCart(); // Load cart inline — prevents race with watcher below
         } else {
           dispatch(clearCart());
           dispatch(setAuthInitialized());
@@ -33,30 +50,20 @@ function App() {
       } catch {
         dispatch(clearCart());
         dispatch(setAuthInitialized());
+      } finally {
+        initialLoadDone.current = true; // Mark initial load as done
       }
     };
     fetchUser();
-  }, [dispatch]);
+  }, [dispatch, fetchCart]);
 
-  // 2. Cart Hydration: Fetch cart data dynamically whenever a user logs in
+  // 2. Subsequent logins: Re-fetch cart when auth state changes AFTER initial load
   useEffect(() => {
+    if (!initialLoadDone.current) return; // Skip during initial page load
     if (isAuthenticated) {
-      const fetchCart = async () => {
-        try {
-           const cartRes = await axiosInstance.get('/api/v1/cart');
-           const savedCart = cartRes.data?.data;
-           if (savedCart && savedCart.items?.length > 0) {
-             dispatch(loadCart(savedCart));
-           } else {
-             dispatch(loadCart({ items: [], totalQuantity: 0, totalAmount: 0 }));
-           }
-        } catch {
-           dispatch(loadCart({ items: [], totalQuantity: 0, totalAmount: 0 }));
-        }
-      };
       fetchCart();
     }
-  }, [isAuthenticated, dispatch]);
+  }, [isAuthenticated, fetchCart]);
 
   return (
     <ToastProvider>

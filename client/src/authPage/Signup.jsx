@@ -5,10 +5,10 @@ const Signup = ({ onClose }) => {
   const { addToast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
-    userPhone: "8381674598",
-    userName: "Ranvendra Pratap Singh",
-    userEmail: "ranvendra.singh2024@nst.rishihood.edu.in",
-    password: "N8bae991#*",
+    userPhone: "",
+    userName: "",
+    userEmail: "",
+    password: "",
   });
 
   const handleChange = (e) => {

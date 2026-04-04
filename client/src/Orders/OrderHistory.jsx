@@ -162,7 +162,6 @@ const OrderHistory = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [deliveredIds, setDeliveredIds] = useState(new Set());
-  const [currentDate] = useState(() => Date.now());
 
   const fetchOrders = useCallback(async () => {
     try {
@@ -223,12 +222,17 @@ const OrderHistory = () => {
     );
   }
 
+  // Compute now at render time (after orders are loaded) so the split is always accurate.
+  // Using a regular const here (not a hook) is safe because this code only runs
+  // after all early returns, meaning orders are available.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const now = Date.now();
   const activeOrders = orders.filter(o => {
-    const age = currentDate - new Date(o.createdAt).getTime();
+    const age = now - new Date(o.createdAt).getTime();
     return age < DELIVERY_TIME_MS && !deliveredIds.has(o._id);
   });
   const pastOrders = orders.filter(o => {
-    const age = currentDate - new Date(o.createdAt).getTime();
+    const age = now - new Date(o.createdAt).getTime();
     return age >= DELIVERY_TIME_MS || deliveredIds.has(o._id);
   });
 

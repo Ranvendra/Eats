@@ -1,26 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "https://eats-wxt2.onrender.com/api/:path*"
-    },
-    {
-      "source": "/login",
-      "destination": "https://eats-wxt2.onrender.com/login"
-    },
-    {
-      "source": "/signup",
-      "destination": "https://eats-wxt2.onrender.com/signup"
-    },
-    {
-      "source": "/logout",
-      "destination": "https://eats-wxt2.onrender.com/logout"
-    },
-    {
-      "source": "/profile",
-      "destination": "https://eats-wxt2.onrender.com/profile"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

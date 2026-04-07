@@ -31,7 +31,6 @@ The backend is written in TypeScript with a class-based Object-Oriented architec
 | Service    | URL                                      |
 |------------|------------------------------------------|
 | Frontend   | https://eatindia.vercel.app              |
-| Backend    | https://eats-wxt2.onrender.com           |
 
 The frontend is deployed on Vercel. The backend API is deployed on Render.
 
@@ -716,7 +715,7 @@ The frontend is deployed on Vercel. Vercel automatically detects the Vite config
 
 ---
 
-## Known Limitations
+## Known Limitations- We will Add these features soon
 
 The following features are present in the user interface but are not fully implemented at the backend level.
 

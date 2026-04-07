@@ -1,1 +1,1 @@
-{"version":3,"file":"userAuth.d.ts","sourceRoot":"","sources":["../../src/middlewares/userAuth.ts"],"names":[],"mappings":"AAAA,OAAO,EAAmC,cAAc,EAAE,MAAM,SAAS,CAAC;AAI1E,eAAO,MAAM,QAAQ,EAAE,cAsBtB,CAAC"}
+{"version":3,"file":"userAuth.d.ts","sourceRoot":"","sources":["../../src/middlewares/userAuth.ts"],"names":[],"mappings":"AAAA,OAAO,EAAmC,cAAc,EAAE,MAAM,SAAS,CAAC;AAI1E,eAAO,MAAM,QAAQ,EAAE,cA+BtB,CAAC"}

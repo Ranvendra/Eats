@@ -18,6 +18,8 @@ const userSlice = createSlice({
     logoutUser: (state) => {
       state.userInfo = null;
       state.isAuthenticated = false;
+      // Safety net: always clear localStorage token on logout
+      localStorage.removeItem("eats_token");
     },
     setAuthInitialized: (state) => {
       state.isInitialized = true;

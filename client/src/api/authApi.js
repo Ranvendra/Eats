@@ -1,5 +1,7 @@
 import axiosInstance from "./axiosInstance";
 
+const TOKEN_KEY = "eats_token";
+
 export const authApi = {
     // Signup API Call
     signup: async (userData) => {
@@ -12,10 +14,14 @@ export const authApi = {
         }
     },
 
-    // Login API Call
+    // Login API Call — stores JWT in localStorage for cross-browser support
     login: async (credentials) => {
         try {
             const response = await axiosInstance.post("/api/v1/auth/login", credentials);
+            const { token } = response.data;
+            if (token) {
+                localStorage.setItem(TOKEN_KEY, token);
+            }
             return response.data;
         } catch (error) {
             const msg = error.response?.data?.message;
@@ -23,17 +29,21 @@ export const authApi = {
         }
     },
 
-    // Logout API Call
+    // Logout API Call — removes JWT from localStorage
     logout: async () => {
         try {
+            // Remove token first so any in-flight requests don't re-auth
+            localStorage.removeItem(TOKEN_KEY);
             const response = await axiosInstance.post("/api/v1/auth/logout");
             return response.data;
         } catch (error) {
+            // Even if the server call fails, always clear local token
+            localStorage.removeItem(TOKEN_KEY);
             throw error.response?.data || "Logout failed";
         }
     },
 
-    // Get Profile API Call
+    // Get Profile API Call — Authorization header is injected by axiosInstance interceptor
     getProfile: async () => {
         try {
             const response = await axiosInstance.get("/api/v1/auth/profile");
@@ -55,3 +65,4 @@ export const authApi = {
         }
     },
 };
+

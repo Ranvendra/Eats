@@ -4,7 +4,16 @@ import User from "../models/User";
 
 export const userAuth: RequestHandler = async (req: Request | any, res: Response, next: NextFunction) => {
   try {
-    const { token } = req.cookies;
+    // Primary: Authorization header (works in ALL browsers cross-domain — Safari, Chrome, etc.)
+    // Fallback: Cookie (for browsers that still support it)
+    let token: string | undefined;
+
+    const authHeader = req.headers.authorization;
+    if (authHeader && authHeader.startsWith("Bearer ")) {
+      token = authHeader.split(" ")[1];
+    } else {
+      token = req.cookies?.token;
+    }
 
     if (!token) {
       throw new Error("Please Login");
@@ -22,6 +31,6 @@ export const userAuth: RequestHandler = async (req: Request | any, res: Response
     req.user = user;
     next();
   } catch (err: any) {
-    res.status(400).json({ message: "ERROR : " + err.message });
+    res.status(401).json({ message: err.message });
   }
 };

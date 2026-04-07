@@ -4,7 +4,7 @@ export const authApi = {
     // Signup API Call
     signup: async (userData) => {
         try {
-            const response = await axiosInstance.post("/signup", userData);
+            const response = await axiosInstance.post("/api/v1/auth/signup", userData);
             return response.data;
         } catch (error) {
             const msg = error.response?.data?.message;
@@ -15,7 +15,7 @@ export const authApi = {
     // Login API Call
     login: async (credentials) => {
         try {
-            const response = await axiosInstance.post("/login", credentials);
+            const response = await axiosInstance.post("/api/v1/auth/login", credentials);
             return response.data;
         } catch (error) {
             const msg = error.response?.data?.message;
@@ -26,7 +26,7 @@ export const authApi = {
     // Logout API Call
     logout: async () => {
         try {
-            const response = await axiosInstance.post("/logout");
+            const response = await axiosInstance.post("/api/v1/auth/logout");
             return response.data;
         } catch (error) {
             throw error.response?.data || "Logout failed";
@@ -36,7 +36,7 @@ export const authApi = {
     // Get Profile API Call
     getProfile: async () => {
         try {
-            const response = await axiosInstance.get("/profile");
+            const response = await axiosInstance.get("/api/v1/auth/profile");
             return response.data;
         } catch (error) {
             throw new Error(error.response?.data?.message || "Session expired. Please login again.");
@@ -47,7 +47,7 @@ export const authApi = {
         try {
             // Do NOT manually set Content-Type — axios will auto-set
             // multipart/form-data with the correct boundary when given FormData
-            const response = await axiosInstance.patch("/profile", formData);
+            const response = await axiosInstance.put("/api/v1/auth/profile", formData);
             return response.data;
         } catch (error) {
             const msg = error.response?.data?.message;

@@ -8,17 +8,12 @@ This diagram illustrates the macro-level interactions between the React frontend
 
 ```mermaid
 graph TD
-    %% Define Styles
-    classDef frontend fill:#61DAFB,stroke:#333,stroke-width:2px,color:#000;
-    classDef backend fill:#68A063,stroke:#333,stroke-width:2px,color:#fff;
-    classDef database fill:#47A248,stroke:#333,stroke-width:2px,color:#fff;
-    classDef external fill:#F05032,stroke:#333,stroke-width:2px,color:#fff;
 
     %% Client / Frontend
     subgraph Client [Frontend: React 19 + Vite]
-        UI[User Interface Components]:::frontend
-        State[Redux Toolkit Store<br>(userSlice, cartSlice, restaurantSlice)]:::frontend
-        API_Client[Axios Instance / API Utils]:::frontend
+        UI[User Interface Components]
+        State[Redux Toolkit Store - userSlice, cartSlice, restaurantSlice]
+        API_Client[Axios Instance / API Utils]
         
         UI <--> State
         UI --> API_Client
@@ -26,12 +21,12 @@ graph TD
 
     %% Server / Backend
     subgraph Server [Backend: Node.js + Express]
-        Router[Express Routers<br>(auth, restaurant, cart, order, payment)]:::backend
-        AuthMid[Auth Middleware<br>(JWT verification)]:::backend
-        Controllers[Controllers Logic]:::backend
-        Models[Mongoose Models<br>(User, Restaurant, MenuItem, Cart, Order)]:::backend
+        Router[Express Routers - auth, restaurant, cart, order, payment]
+        AuthMid[Auth Middleware - JWT verification]
+        Controllers[Controllers Logic]
+        Models[Mongoose Models - User, Restaurant, MenuItem, Cart, Order]
         
-        API_Client -->|REST API Calls (JSON)| Router
+        API_Client -->|REST API Calls JSON| Router
         Router --> AuthMid
         AuthMid --> Controllers
         Router --> Controllers
@@ -39,15 +34,15 @@ graph TD
     end
 
     %% Database
-    subgraph Database Layer
-        DB[(MongoDB)]:::database
-        Models <-->|Read / Write (Mongoose)| DB
+    subgraph DatabaseLayer [Database Layer]
+        DB[(MongoDB)]
+        Models <-->|Read / Write Mongoose| DB
     end
 
     %% External Services
-    subgraph External APIs
-        Cloudinary[Cloudinary<br>(Image Hosting)]:::external
-        Razorpay[Razorpay<br>(Payment Gateway)]:::external
+    subgraph ExternalAPIs [External Services]
+        Cloudinary[Cloudinary - Image Hosting]
+        Razorpay[Razorpay - Payment Gateway]
         
         Controllers -.->|Image Upload / Retrieval| Cloudinary
         Controllers -.->|Payment Creation / Verification| Razorpay

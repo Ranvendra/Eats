@@ -1,0 +1,1 @@
+{"version":3,"file":"route.interface.d.ts","sourceRoot":"","sources":["../../src/utils/route.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,SAAS,CAAC;AAEjC,MAAM,WAAW,MAAM;IACrB,IAAI,CAAC,EAAE,MAAM,CAAC;IACd,MAAM,EAAE,MAAM,CAAC;CAChB"}

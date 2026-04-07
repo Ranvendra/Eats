@@ -45,6 +45,7 @@ class AuthController {
       const userResponse = user.toObject();
       delete userResponse.password;
 
+      // Also set cookie as fallback for browsers that support it
       res.cookie("token", token, {
         httpOnly: true,
         secure: isProduction,
@@ -52,7 +53,8 @@ class AuthController {
         expires: new Date(Date.now() + 7 * 24 * 3600000),
       });
 
-      res.json({ message: "Login Successful!!", data: userResponse });
+      // Return token in body — client stores in localStorage for cross-domain Safari/Chrome support
+      res.json({ message: "Login Successful!!", data: userResponse, token });
     } catch (err: any) {
       const message = err.message === "Invalid credentials"
         ? "Incorrect email/phone or password. Please try again."
@@ -62,12 +64,14 @@ class AuthController {
   };
 
   public handleLogout = (req: Request, res: Response) => {
+    // Clear cookie fallback
     res.cookie("token", "", {
       httpOnly: true,
       secure: isProduction,
       sameSite: isProduction ? "none" : "lax",
       expires: new Date(0),
     });
+    // Client is also responsible for clearing localStorage token
     res.json({ message: "Logout Successful!!" });
   };
 

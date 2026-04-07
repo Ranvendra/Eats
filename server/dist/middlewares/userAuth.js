@@ -8,7 +8,16 @@ const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const User_1 = __importDefault(require("../models/User"));
 const userAuth = async (req, res, next) => {
     try {
-        const { token } = req.cookies;
+        // Primary: Authorization header (works in ALL browsers cross-domain — Safari, Chrome, etc.)
+        // Fallback: Cookie (for browsers that still support it)
+        let token;
+        const authHeader = req.headers.authorization;
+        if (authHeader && authHeader.startsWith("Bearer ")) {
+            token = authHeader.split(" ")[1];
+        }
+        else {
+            token = req.cookies?.token;
+        }
         if (!token) {
             throw new Error("Please Login");
         }
@@ -22,7 +31,7 @@ const userAuth = async (req, res, next) => {
         next();
     }
     catch (err) {
-        res.status(400).json({ message: "ERROR : " + err.message });
+        res.status(401).json({ message: err.message });
     }
 };
 exports.userAuth = userAuth;

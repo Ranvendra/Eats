@@ -6,7 +6,7 @@ This document provides a visual representation of the architecture and data flow
 
 This diagram illustrates the macro-level interactions between the React frontend, the Node/Express backend, the MongoDB database, and third-party external services.
 
-```mermaid
+```
 graph TD
 
     %% Client / Frontend

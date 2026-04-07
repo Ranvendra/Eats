@@ -101,12 +101,12 @@ const Restaurants = () => {
         break;
       case "costLowToHigh":
         result.sort(
-          (a, b) => 100 * a.restaurantRating - 100 * b.restaurantRating,
+          (a, b) => a.restaurantMinOrder - b.restaurantMinOrder,
         );
         break;
       case "costHighToLow":
         result.sort(
-          (a, b) => 100 * b.restaurantRating - 100 * a.restaurantRating,
+          (a, b) => b.restaurantMinOrder - a.restaurantMinOrder,
         );
         break;
       default:

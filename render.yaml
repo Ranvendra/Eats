@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: eats-backend
+    runtime: node
+    rootDir: server
+    # Step 1: Install ALL dependencies (including devDeps for tsc), then compile TS → JS
+    buildCommand: npm install --include=dev && npm run build
+    # Step 2: Run the pre-compiled JS — no ts-node, no heap OOM
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production

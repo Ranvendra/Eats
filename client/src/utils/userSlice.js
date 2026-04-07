@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// Switched to Header based auth
+
 const userSlice = createSlice({
   name: "user",
   initialState: {

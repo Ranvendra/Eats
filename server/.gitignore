@@ -80,8 +80,11 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 .output
+
+# NOTE: dist/ is intentionally NOT ignored here so the compiled
+# server output can be committed and deployed directly on Render
+# without needing a build step on the server.
 
 # Gatsby files
 .cache/

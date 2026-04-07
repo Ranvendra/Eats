@@ -4,6 +4,8 @@ import User from "../models/User";
 import { validateSignUpData, validateLoginData } from "../utils/validation";
 import { uploadToCloudinary } from "../config/cloudinary";
 
+
+// Switching to header Based Authentication.
 const isProduction = process.env.NODE_ENV === "production" || process.env.isProd === "production";
 
 class AuthController {

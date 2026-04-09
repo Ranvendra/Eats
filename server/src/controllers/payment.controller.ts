@@ -3,6 +3,11 @@ import Razorpay from "razorpay";
 import crypto from "crypto";
 
 class PaymentController {
+  /**
+   * Initializes a new Razorpay order.
+   * @param req - Express Request object (expects amount in body)
+   * @param res - Express Response object
+   */
   public createOrder = async (req: Request, res: Response) => {
     try {
       const { amount } = req.body; 
@@ -30,6 +35,11 @@ class PaymentController {
     }
   };
 
+  /**
+   * Verifies the Razorpay payment signature.
+   * @param req - Express Request object (expects order_id, payment_id, and signature in body)
+   * @param res - Express Response object
+   */
   public verifyPayment = async (req: Request, res: Response) => {
     try {
       const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;

@@ -36,6 +36,10 @@ const cartItemSchema = new Schema<ICartItem>(
   { _id: false }
 );
 
+/**
+ * Cart Schema Definition
+ * Manages the user's active shopping cart, linked to a specific restaurant.
+ */
 const cartSchema = new Schema<ICart>(
   {
     userId: {

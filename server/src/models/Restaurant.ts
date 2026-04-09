@@ -21,6 +21,10 @@ export interface IRestaurant extends Document {
   updatedAt: Date;
 }
 
+/**
+ * Restaurant Schema Definition
+ * Stores core restaurant metadata, including operational status and ratings.
+ */
 const restaurantSchema = new Schema<IRestaurant>(
   {
     restaurantName: { type: String, required: true, trim: true, maxlength: 100 },

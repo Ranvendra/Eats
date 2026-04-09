@@ -19,6 +19,10 @@ export interface IUser extends Document {
   getJWT(): string;
 }
 
+/**
+ * User Schema Definition
+ * Handles user profile data, authentication credentials, and session generation.
+ */
 const userSchema = new Schema<IUser>(
   {
     userName: { type: String, required: true, minlength: 3, maxlength: 50 },

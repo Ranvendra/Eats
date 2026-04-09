@@ -1,5 +1,9 @@
 import User from "../models/User";
 
+/**
+ * AuthService Class
+ * Encapsulates business logic for user registration and authentication.
+ */
 class AuthService {
   public async signupUser(userData: any) {
     const { userName, userEmail, password, userPhone } = userData;

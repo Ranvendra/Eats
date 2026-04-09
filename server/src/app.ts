@@ -4,6 +4,11 @@ import { connect } from "mongoose";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 
+/**
+ * Core Application Class
+ * Responsible for bootstrapping the Express server, connecting to MongoDB,
+ * and initializing global middlewares and routes.
+ */
 class App {
   public app: express.Application;
   public port: string | number;

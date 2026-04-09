@@ -2,6 +2,11 @@ import { Request, Response, NextFunction, RequestHandler } from "express";
 import jwt from "jsonwebtoken";
 import User from "../models/User";
 
+/**
+ * userAuth Middleware
+ * Verifies the user's identity using JWT. Supports both Authorization headers 
+ * and HTTP-only cookies for wide browser compatibility.
+ */
 export const userAuth: RequestHandler = async (req: Request | any, res: Response, next: NextFunction) => {
   try {
     // Primary: Authorization header (works in ALL browsers cross-domain — Safari, Chrome, etc.)

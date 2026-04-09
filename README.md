@@ -1,12 +1,19 @@
-# Eats — Full Stack Food Delivery Application
+# 🍔 Eats — Full Stack Food Delivery Application
 
-Eats is a full stack web application that allows users to browse restaurants, explore menus, add items to a cart, make payments, and track orders. It is built using the MERN stack — MongoDB, Express.js, React, and Node.js — and is fully deployed on the cloud.
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 
-The backend is written in TypeScript with a class-based Object-Oriented architecture. The frontend is a React Single Page Application using Redux Toolkit for global state management.
+Eats is a premium full stack food delivery application that allows users to browse restaurants, explore menus, add items to a cart, make payments, and track orders. 
+
+> [!TIP]
+> This project is built using the **MERN stack** (MongoDB, Express.js, React, Node.js) and features a production-ready **TypeScript** backend with a class-based architecture.
 
 ---
 
-## Table of Contents
+## 📖 Table of Contents
 
 1. [Live Demo](#live-demo)
 2. [Features](#features)
@@ -26,7 +33,9 @@ The backend is written in TypeScript with a class-based Object-Oriented architec
 
 ---
 
-## Live Demo
+---
+
+## 🚀 Live Demo
 
 | Service    | URL                                      |
 |------------|------------------------------------------|
@@ -36,7 +45,9 @@ The frontend is deployed on Vercel. The backend API is deployed on Render.
 
 ---
 
-## Features
+---
+
+## ✨ Features
 
 **User Authentication**
 Users can create an account using their name, email, phone number, and password. They can log in using either their email address or phone number. Session management uses JSON Web Tokens stored in the browser's local storage. Authentication works consistently across Chrome, Safari, Firefox, Arc, and all other modern browsers.
@@ -64,7 +75,9 @@ Profile pictures are uploaded as a stream directly to Cloudinary without writing
 
 ---
 
-## Technology Stack
+---
+
+## 🛠️ Technology Stack
 
 ### Backend
 
@@ -102,7 +115,9 @@ Profile pictures are uploaded as a stream directly to Cloudinary without writing
 
 ---
 
-## Project Architecture
+---
+
+## 🏗️ Project Architecture
 
 ### Backend Architecture
 
@@ -143,7 +158,9 @@ A critical "hydration" pattern runs on every page load. When the application fir
 
 ---
 
-## Project Structure
+---
+
+## 📂 Project Structure
 
 ```
 Eats/
@@ -273,7 +290,9 @@ Eats/
 
 ---
 
-## Database Models
+---
+
+## 🗄️ Database Models
 
 All data is stored in MongoDB Atlas. The following sections describe each collection and its fields.
 
@@ -401,7 +420,9 @@ A compound index on `{ userId: 1, createdAt: -1 }` ensures that fetching a user'
 
 ---
 
-## API Reference
+---
+
+## 🔌 API Reference
 
 All routes are prefixed with `/api/v1`. Protected routes require a valid JWT. The token is read from the `Authorization: Bearer <token>` header. If no header is present, the middleware falls back to reading the `token` cookie.
 
@@ -448,7 +469,9 @@ All routes are prefixed with `/api/v1`. Protected routes require a valid JWT. Th
 
 ---
 
-## Frontend Pages and Components
+---
+
+## 🖥️ Frontend Pages and Components
 
 ### Application Entry Point — `App.jsx`
 
@@ -490,7 +513,9 @@ The profile page is split into three subcomponents for maintainability: `Profile
 
 ---
 
-## Key Data Flows
+---
+
+## 🔄 Key Data Flows
 
 ### Authentication Flow
 
@@ -554,7 +579,9 @@ The profile page is split into three subcomponents for maintainability: `Profile
 
 ---
 
-## Authentication Design
+---
+
+## 🛡️ Authentication Design
 
 Authentication uses JSON Web Tokens stored in the browser's local storage. This design was chosen specifically to solve a cross-browser compatibility problem.
 
@@ -570,7 +597,9 @@ To prevent a stale token from persisting after logout, the `logoutUser` Redux ac
 
 ---
 
-## Local Development Setup
+---
+
+## 💻 Local Development Setup
 
 ### Prerequisites
 
@@ -652,7 +681,9 @@ The frontend will be available at `http://localhost:5173`.
 
 ---
 
-## Environment Variables
+---
+
+## 🌐 Environment Variables
 
 ### Server (`server/.env`)
 
@@ -677,7 +708,9 @@ The frontend will be available at `http://localhost:5173`.
 
 ---
 
-## Deployment
+---
+
+## 🚢 Deployment
 
 ### Backend (Render)
 
@@ -715,7 +748,9 @@ The frontend is deployed on Vercel. Vercel automatically detects the Vite config
 
 ---
 
-## Known Limitations- We will Add these features soon
+---
+
+## 📝 Known Limitations
 
 The following features are present in the user interface but are not fully implemented at the backend level.
 

@@ -33,8 +33,7 @@ Eats is a premium full stack food delivery application that allows users to brow
 
 ---
 
----
-
+<a name="live-demo"></a>
 ## 🚀 Live Demo
 
 | Service    | URL                                      |
@@ -45,8 +44,7 @@ The frontend is deployed on Vercel. The backend API is deployed on Render.
 
 ---
 
----
-
+<a name="features"></a>
 ## ✨ Features
 
 **User Authentication**
@@ -75,8 +73,7 @@ Profile pictures are uploaded as a stream directly to Cloudinary without writing
 
 ---
 
----
-
+<a name="technology-stack"></a>
 ## 🛠️ Technology Stack
 
 ### Backend
@@ -115,8 +112,7 @@ Profile pictures are uploaded as a stream directly to Cloudinary without writing
 
 ---
 
----
-
+<a name="project-architecture"></a>
 ## 🏗️ Project Architecture
 
 ### Backend Architecture
@@ -158,8 +154,7 @@ A critical "hydration" pattern runs on every page load. When the application fir
 
 ---
 
----
-
+<a name="project-structure"></a>
 ## 📂 Project Structure
 
 ```
@@ -290,8 +285,7 @@ Eats/
 
 ---
 
----
-
+<a name="database-models"></a>
 ## 🗄️ Database Models
 
 All data is stored in MongoDB Atlas. The following sections describe each collection and its fields.
@@ -420,8 +414,7 @@ A compound index on `{ userId: 1, createdAt: -1 }` ensures that fetching a user'
 
 ---
 
----
-
+<a name="api-reference"></a>
 ## 🔌 API Reference
 
 All routes are prefixed with `/api/v1`. Protected routes require a valid JWT. The token is read from the `Authorization: Bearer <token>` header. If no header is present, the middleware falls back to reading the `token` cookie.
@@ -469,8 +462,7 @@ All routes are prefixed with `/api/v1`. Protected routes require a valid JWT. Th
 
 ---
 
----
-
+<a name="frontend-pages-and-components"></a>
 ## 🖥️ Frontend Pages and Components
 
 ### Application Entry Point — `App.jsx`
@@ -513,8 +505,7 @@ The profile page is split into three subcomponents for maintainability: `Profile
 
 ---
 
----
-
+<a name="key-data-flows"></a>
 ## 🔄 Key Data Flows
 
 ### Authentication Flow
@@ -579,8 +570,7 @@ The profile page is split into three subcomponents for maintainability: `Profile
 
 ---
 
----
-
+<a name="authentication-design"></a>
 ## 🛡️ Authentication Design
 
 Authentication uses JSON Web Tokens stored in the browser's local storage. This design was chosen specifically to solve a cross-browser compatibility problem.
@@ -597,8 +587,7 @@ To prevent a stale token from persisting after logout, the `logoutUser` Redux ac
 
 ---
 
----
-
+<a name="local-development-setup"></a>
 ## 💻 Local Development Setup
 
 ### Prerequisites
@@ -681,8 +670,7 @@ The frontend will be available at `http://localhost:5173`.
 
 ---
 
----
-
+<a name="environment-variables"></a>
 ## 🌐 Environment Variables
 
 ### Server (`server/.env`)
@@ -708,8 +696,7 @@ The frontend will be available at `http://localhost:5173`.
 
 ---
 
----
-
+<a name="deployment"></a>
 ## 🚢 Deployment
 
 ### Backend (Render)
@@ -748,8 +735,7 @@ The frontend is deployed on Vercel. Vercel automatically detects the Vite config
 
 ---
 
----
-
+<a name="known-limitations"></a>
 ## 📝 Known Limitations
 
 The following features are present in the user interface but are not fully implemented at the backend level.
@@ -764,6 +750,7 @@ The following features are present in the user interface but are not fully imple
 
 ---
 
-## License
+<a name="license"></a>
+## 📜 License
 
 This project is licensed under the ISC License.

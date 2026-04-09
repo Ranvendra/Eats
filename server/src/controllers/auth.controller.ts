@@ -11,6 +11,11 @@ const isProduction = process.env.NODE_ENV === "production" || process.env.isProd
 class AuthController {
   private authService = new AuthService();
 
+  /**
+   * Handles user signup by validating data and creating a new user record.
+   * @param req - Express Request object
+   * @param res - Express Response object
+   */
   public handleSignup = async (req: Request, res: Response) => {
     try {
       validateSignUpData(req);
@@ -37,6 +42,11 @@ class AuthController {
     }
   };
 
+  /**
+   * Handles user login by verifying credentials and issuing a JWT token.
+   * @param req - Express Request object
+   * @param res - Express Response object
+   */
   public handleLogin = async (req: Request, res: Response) => {
     try {
       validateLoginData(req);
@@ -65,6 +75,11 @@ class AuthController {
     }
   };
 
+  /**
+   * Handles user logout by clearing the authentication cookie.
+   * @param req - Express Request object
+   * @param res - Express Response object
+   */
   public handleLogout = (req: Request, res: Response) => {
     // Clear cookie fallback
     res.cookie("token", "", {
@@ -77,6 +92,11 @@ class AuthController {
     res.json({ message: "Logout Successful!!" });
   };
 
+  /**
+   * Fetches the profile of the currently authenticated user.
+   * @param req - Express Request object (expects user object attached by auth middleware)
+   * @param res - Express Response object
+   */
   public handleProfile = async (req: Request | any, res: Response) => {
     try {
       const user = req.user;
@@ -89,6 +109,11 @@ class AuthController {
     }
   };
 
+  /**
+   * Updates the profile information of the currently authenticated user.
+   * @param req - Express Request object
+   * @param res - Express Response object
+   */
   public handleProfileUpdate = async (req: Request | any, res: Response) => {
     try {
       const user = req.user;

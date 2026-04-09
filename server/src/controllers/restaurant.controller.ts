@@ -5,6 +5,11 @@ import Restaurant from "../models/Restaurant";
 import MenuItem from "../models/MenuItem";
 
 class RestaurantController {
+  /**
+   * Fetches a paginated list of all restaurants.
+   * @param req - Express Request object
+   * @param res - Express Response object
+   */
   public getAllRestaurants = async (req: Request, res: Response) => {
     try {
       const page = parseInt(req.query.page as string) || 1;
@@ -29,6 +34,11 @@ class RestaurantController {
     }
   };
 
+  /**
+   * Fetches details for a single restaurant by its ID.
+   * @param req - Express Request object (expects resId in params)
+   * @param res - Express Response object
+   */
   public getRestaurantById = async (req: Request, res: Response) => {
     try {
       const resId = req.params.resId as string;
@@ -52,6 +62,11 @@ class RestaurantController {
     }
   };
 
+  /**
+   * Fetches the menu items for a specific restaurant.
+   * @param req - Express Request object (expects resId in params)
+   * @param res - Express Response object
+   */
   public getRestaurantMenu = async (req: Request, res: Response) => {
     try {
       const resId = req.params.resId as string;

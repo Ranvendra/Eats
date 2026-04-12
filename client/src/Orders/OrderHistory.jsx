@@ -3,7 +3,10 @@ import axiosInstance from "../api/axiosInstance";
 import OrderHero from "./OrderHero";
 import LazyImage from "../LazyLoading/LazyImage";
 import { Clock, Package, Loader2, ShoppingBag, ArrowUpRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loadCart } from "../utils/cartSlice";
+import { useToast } from "../Toast/ToastContext";
 
 // 1 minute = simulated delivery time
 const DELIVERY_TIME_MS = 60 * 1000;
@@ -91,6 +94,46 @@ const ActiveOrderCard = ({ order, onDelivered }) => {
 
 // ─── PAST Order Card — Your Original Design ──────────────────────────────────
 const PastOrderItem = ({ order }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { addToast } = useToast();
+
+  const handleReorder = () => {
+    let totalQuantity = 0;
+    let totalAmount = 0;
+    
+    const newItems = (order.orderItems || []).map(item => {
+        totalQuantity += item.itemQuantity;
+        totalAmount += item.itemQuantity * item.itemPrice;
+        
+        return {
+           menuItemId: item.menuItemId,
+           menuItemName: item.itemName || "Item",
+           menuItemPrice: item.itemPrice,
+           itemQuantity: item.itemQuantity,
+           isMenuItemVeg: item.isVeg !== undefined ? item.isVeg : true,
+           menuItemImage: undefined 
+        };
+    });
+
+    const restId = order.restaurantId?._id || order.restaurantId;
+
+    const newCartPayload = {
+       items: newItems,
+       totalQuantity,
+       totalAmount,
+       restaurantId: restId,
+       restaurantName: order.restaurantName || order.restaurantId?.restaurantName || "",
+    };
+
+    dispatch(loadCart(newCartPayload));
+    addToast("Cart replaced with your previous order!");
+    
+    if (restId) {
+      navigate("/restaurants/" + restId);
+    }
+  };
+
   const restaurantName = order.restaurantName || order.restaurantId?.restaurantName || "Restaurant";
   const restaurantAddress = order.restaurantId?.restaurantCity || order.restaurantId?.restaurantAddress || "";
   const restaurantImage = order.restaurantId?.restaurantImage || null;
@@ -145,7 +188,10 @@ const PastOrderItem = ({ order }) => {
           {/* Action Bottom Row — animated line + Reorder button */}
           <div className="mt-auto pt-4 flex justify-between items-end">
             <div className="h-px w-24 bg-gray-300 group-hover:w-full group-hover:bg-[#12b603] transition-all duration-700 ease-in-out"></div>
-            <button className="flex items-center p-3 bg-[#d9ffd7] gap-2 rounded-t-xl text-black text-sm tracking-widest hover:text-[#0b8a00] transition-colors cursor-pointer">
+            <button 
+              onClick={handleReorder}
+              className="flex items-center p-3 bg-[#d9ffd7] gap-2 rounded-t-xl text-black text-sm tracking-widest hover:text-[#0b8a00] transition-colors cursor-pointer"
+            >
               Reorder
               <ArrowUpRight size={16} />
             </button>

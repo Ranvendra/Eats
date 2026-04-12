@@ -94,6 +94,10 @@ const ActiveOrderCard = ({ order, onDelivered }) => {
 
 // ─── PAST Order Card — Your Original Design ──────────────────────────────────
 const PastOrderItem = ({ order }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { addToast } = useToast();
+
   const restaurantName = order.restaurantName || order.restaurantId?.restaurantName || "Restaurant";
   const restaurantAddress = order.restaurantId?.restaurantCity || order.restaurantId?.restaurantAddress || "";
   const restaurantImage = order.restaurantId?.restaurantImage || null;

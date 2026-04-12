@@ -98,6 +98,27 @@ const PastOrderItem = ({ order }) => {
   const navigate = useNavigate();
   const { addToast } = useToast();
 
+  const handleReorder = () => {
+    let totalQuantity = 0;
+    let totalAmount = 0;
+    
+    const newItems = (order.orderItems || []).map(item => {
+        totalQuantity += item.itemQuantity;
+        totalAmount += item.itemQuantity * item.itemPrice;
+        
+        return {
+           menuItemId: item.menuItemId,
+           menuItemName: item.itemName || "Item",
+           menuItemPrice: item.itemPrice,
+           itemQuantity: item.itemQuantity,
+           isMenuItemVeg: item.isVeg !== undefined ? item.isVeg : true,
+           menuItemImage: undefined 
+        };
+    });
+
+    const restId = order.restaurantId?._id || order.restaurantId;
+  };
+
   const restaurantName = order.restaurantName || order.restaurantId?.restaurantName || "Restaurant";
   const restaurantAddress = order.restaurantId?.restaurantCity || order.restaurantId?.restaurantAddress || "";
   const restaurantImage = order.restaurantId?.restaurantImage || null;

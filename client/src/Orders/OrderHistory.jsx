@@ -117,6 +117,21 @@ const PastOrderItem = ({ order }) => {
     });
 
     const restId = order.restaurantId?._id || order.restaurantId;
+
+    const newCartPayload = {
+       items: newItems,
+       totalQuantity,
+       totalAmount,
+       restaurantId: restId,
+       restaurantName: order.restaurantName || order.restaurantId?.restaurantName || "",
+    };
+
+    dispatch(loadCart(newCartPayload));
+    addToast("Cart replaced with your previous order!");
+    
+    if (restId) {
+      navigate("/restaurants/" + restId);
+    }
   };
 
   const restaurantName = order.restaurantName || order.restaurantId?.restaurantName || "Restaurant";

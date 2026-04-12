@@ -188,7 +188,10 @@ const PastOrderItem = ({ order }) => {
           {/* Action Bottom Row — animated line + Reorder button */}
           <div className="mt-auto pt-4 flex justify-between items-end">
             <div className="h-px w-24 bg-gray-300 group-hover:w-full group-hover:bg-[#12b603] transition-all duration-700 ease-in-out"></div>
-            <button className="flex items-center p-3 bg-[#d9ffd7] gap-2 rounded-t-xl text-black text-sm tracking-widest hover:text-[#0b8a00] transition-colors cursor-pointer">
+            <button 
+              onClick={handleReorder}
+              className="flex items-center p-3 bg-[#d9ffd7] gap-2 rounded-t-xl text-black text-sm tracking-widest hover:text-[#0b8a00] transition-colors cursor-pointer"
+            >
               Reorder
               <ArrowUpRight size={16} />
             </button>

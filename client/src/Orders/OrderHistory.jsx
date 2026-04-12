@@ -3,7 +3,10 @@ import axiosInstance from "../api/axiosInstance";
 import OrderHero from "./OrderHero";
 import LazyImage from "../LazyLoading/LazyImage";
 import { Clock, Package, Loader2, ShoppingBag, ArrowUpRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loadCart } from "../utils/cartSlice";
+import { useToast } from "../Toast/ToastContext";
 
 // 1 minute = simulated delivery time
 const DELIVERY_TIME_MS = 60 * 1000;

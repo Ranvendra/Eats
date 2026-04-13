@@ -33,8 +33,10 @@ const Hero = () => {
           to take our delicious food.
         </p>
         <button
+          type="button"
           onClick={handlePlaceOrder}
-          className="mt-5 bg-[#04b235] text-white font-bold py-4 px-8 text-sm tracking-wider uppercase rounded-xl shadow-lg transition-all transform hover:-translate-y-1 cursor-pointer"
+          aria-label="Place an order — browse our restaurant menu"
+          className="mt-5 bg-[#04b235] text-white font-bold py-4 px-8 text-sm tracking-wider uppercase rounded-xl shadow-lg transition-all transform hover:-translate-y-1 cursor-pointer active:scale-95"
         >
           Place an Order
         </button>

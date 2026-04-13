@@ -5,6 +5,10 @@ import { setAuthSidebarOpen } from "../utils/userSlice";
 import LazyImage from "../LazyLoading/LazyImage";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector((store) => store.user?.isAuthenticated);
+
   return (
     <section className="relative w-full max-w-8xl mx-auto px-25 pt-10 pb-24 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       {/* Left Content */}

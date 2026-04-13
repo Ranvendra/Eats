@@ -1,7 +1,23 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setAuthSidebarOpen } from "../utils/userSlice";
 import LazyImage from "../LazyLoading/LazyImage";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector((store) => store.user?.isAuthenticated);
+
+  // Navigate to restaurants list; if not logged in, prompt login first
+  const handlePlaceOrder = () => {
+    if (isAuthenticated) {
+      navigate("/restaurants");
+    } else {
+      dispatch(setAuthSidebarOpen(true));
+    }
+  };
+
   return (
     <section className="relative w-full max-w-8xl mx-auto px-25 pt-10 pb-24 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       {/* Left Content */}
@@ -16,7 +32,12 @@ const Hero = () => {
           demand. We provide your order within a very short time. Keep with us
           to take our delicious food.
         </p>
-        <button className="mt-5 bg-[#04b235] text-white font-bold py-4 px-8 text-sm tracking-wider uppercase rounded-xl shadow-lg transition-all transform hover:-translate-y-1">
+        <button
+          type="button"
+          onClick={handlePlaceOrder}
+          aria-label="Place an order — browse our restaurant menu"
+          className="mt-5 bg-[#04b235] text-white font-bold py-4 px-8 text-sm tracking-wider uppercase rounded-xl shadow-lg transition-all transform hover:-translate-y-1 cursor-pointer active:scale-95"
+        >
           Place an Order
         </button>
         {/* Decorative small veggies around text */}

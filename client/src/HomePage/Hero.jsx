@@ -1,4 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setAuthSidebarOpen } from "../utils/userSlice";
 import LazyImage from "../LazyLoading/LazyImage";
 
 const Hero = () => {

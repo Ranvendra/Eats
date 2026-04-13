@@ -32,7 +32,10 @@ const Hero = () => {
           demand. We provide your order within a very short time. Keep with us
           to take our delicious food.
         </p>
-        <button className="mt-5 bg-[#04b235] text-white font-bold py-4 px-8 text-sm tracking-wider uppercase rounded-xl shadow-lg transition-all transform hover:-translate-y-1">
+        <button
+          onClick={handlePlaceOrder}
+          className="mt-5 bg-[#04b235] text-white font-bold py-4 px-8 text-sm tracking-wider uppercase rounded-xl shadow-lg transition-all transform hover:-translate-y-1 cursor-pointer"
+        >
           Place an Order
         </button>
         {/* Decorative small veggies around text */}

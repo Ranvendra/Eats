@@ -9,6 +9,15 @@ const Hero = () => {
   const dispatch = useDispatch();
   const isAuthenticated = useSelector((store) => store.user?.isAuthenticated);
 
+  // Navigate to restaurants list; if not logged in, prompt login first
+  const handlePlaceOrder = () => {
+    if (isAuthenticated) {
+      navigate("/restaurants");
+    } else {
+      dispatch(setAuthSidebarOpen(true));
+    }
+  };
+
   return (
     <section className="relative w-full max-w-8xl mx-auto px-25 pt-10 pb-24 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       {/* Left Content */}

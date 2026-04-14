@@ -49,9 +49,19 @@ const ProfilePopover = () => {
       {/* Avatar Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-10 h-10 rounded-full bg-emerald-50 text-[#04b235] flex items-center justify-center font-extrabold text-lg transition-all shadow-sm cursor-pointer border border-[#c0ff98] hover:bg-emerald-100 hover:scale-105 active:scale-95"
+        className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center transition-all shadow-sm cursor-pointer border border-[#c0ff98] hover:scale-105 active:scale-95"
       >
-        {initial}
+        {user?.profilePicture ? (
+          <img
+            src={user.profilePicture}
+            alt={`${user?.userName || "User"}'s profile`}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <span className="w-full h-full bg-emerald-50 text-[#04b235] flex items-center justify-center font-extrabold text-lg">
+            {initial}
+          </span>
+        )}
       </button>
 
       {/* Popover Dropdown */}

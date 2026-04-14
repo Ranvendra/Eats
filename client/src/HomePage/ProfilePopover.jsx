@@ -68,8 +68,18 @@ const ProfilePopover = () => {
       {isOpen && (
         <div className="absolute right-0 mt-3 w-56 bg-white rounded-xl shadow-2xl py-2 z-50 border border-gray-100 animate-fade-in-up origin-top-right">
           <div className="px-4 py-3 border-b border-gray-100 mb-1 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#04b235] text-white flex items-center justify-center text-lg font-bold shrink-0 shadow-inner">
-              {initial}
+            <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 shadow-inner ring-1 ring-gray-200">
+              {user?.profilePicture ? (
+                <img
+                  src={user.profilePicture}
+                  alt={`${user?.userName || "User"}'s profile`}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full bg-[#04b235] text-white flex items-center justify-center text-lg font-bold">
+                  {initial}
+                </div>
+              )}
             </div>
             <div className="overflow-hidden">
               <p className="text-sm font-bold text-gray-900 truncate tracking-tight">{user?.name || user?.userName || "User"}</p>

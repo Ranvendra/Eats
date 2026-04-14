@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { User, LogOut, ShoppingBag } from "lucide-react";
+import { User, LogOut, Settings, ShoppingBag } from "lucide-react";
 import { useSelector, useDispatch } from "react-redux";
 import { logoutUser } from "../utils/userSlice";
 import { clearCart } from "../utils/cartSlice";
@@ -14,12 +14,7 @@ const ProfilePopover = () => {
   const popoverRef = useRef(null);
   const user = useSelector((store) => store.user.userInfo);
 
-  // Derive initial letter — used as fallback avatar when no picture is set
-  const initial = user?.userName
-    ? user.userName.charAt(0).toUpperCase()
-    : user?.name
-      ? user.name.charAt(0).toUpperCase()
-      : "U";
+  const initial = user?.name ? user.name.charAt(0).toUpperCase() : user?.userName ? user.userName.charAt(0).toUpperCase() : "U";
 
   // Handle clicking outside to close
   useEffect(() => {

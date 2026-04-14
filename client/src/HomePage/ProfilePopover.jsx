@@ -49,6 +49,8 @@ const ProfilePopover = () => {
       {/* Avatar Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
+        aria-label="Open profile menu"
+        aria-expanded={isOpen}
         className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center transition-all shadow-sm cursor-pointer border border-[#c0ff98] hover:scale-105 active:scale-95"
       >
         {user?.profilePicture ? (

@@ -14,7 +14,12 @@ const ProfilePopover = () => {
   const popoverRef = useRef(null);
   const user = useSelector((store) => store.user.userInfo);
 
-  const initial = user?.name ? user.name.charAt(0).toUpperCase() : user?.userName ? user.userName.charAt(0).toUpperCase() : "U";
+  // Derive initial letter — used as fallback avatar when no picture is set
+  const initial = user?.userName
+    ? user.userName.charAt(0).toUpperCase()
+    : user?.name
+      ? user.name.charAt(0).toUpperCase()
+      : "U";
 
   // Handle clicking outside to close
   useEffect(() => {

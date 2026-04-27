@@ -12,6 +12,7 @@ const app = new App([
   new OrderRoutes(),
   new PaymentRoutes(),
   new RestaurantRoutes(),
+  
 ]);
 
 app.startServer();
